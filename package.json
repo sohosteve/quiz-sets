@@ -1,0 +1,10 @@
+{
+  "name": "quiz-sets",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "check": "node scripts/validate.mjs --check",
+    "test": "node --test scripts/validate.test.mjs"
+  }
+}

@@ -1,0 +1,751 @@
+{
+  "slug": "comptia-security-plus-sy0-701",
+  "subject": "CompTIA Security+ (SY0-701)",
+  "questions": [
+    {
+      "id": "secplus-4001",
+      "domain": "4.0 Security Operations",
+      "question": "A responder is collecting evidence from a compromised server that is still powered on. Following the order of volatility in RFC 3227, which item should be collected first?",
+      "choices": [
+        "A full image of the local disk",
+        "CPU registers and cache contents",
+        "Archival backup media",
+        "Remote logging and monitoring data for the system",
+        "The physical configuration and network topology"
+      ],
+      "answer_index": 1,
+      "explanation": "RFC 3227 lists registers and cache as the most volatile evidence, so they are collected first. Disk, remote logs, physical configuration and archival media all appear later in its list.",
+      "sources": [
+        {
+          "title": "RFC 3227: Guidelines for Evidence Collection and Archiving",
+          "url": "https://www.rfc-editor.org/rfc/rfc3227"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-4002",
+      "domain": "4.0 Security Operations",
+      "question": "During an investigation, an analyst keeps a record of every person who handled a seized laptop, the date and time it was collected or transferred, and the reason for each transfer. What is this process called?",
+      "choices": [
+        "Legal hold",
+        "Order of volatility",
+        "Chain of custody",
+        "Data retention",
+        "Root cause analysis"
+      ],
+      "answer_index": 2,
+      "explanation": "NIST defines chain of custody as tracking evidence through collection, safeguarding and analysis by documenting each handler, the date/time of collection or transfer, and the purpose. Order of volatility concerns collection sequence, not handling records.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: chain of custody",
+          "url": "https://csrc.nist.gov/glossary/term/chain_of_custody"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-4003",
+      "domain": "4.0 Security Operations",
+      "question": "An analyst wants to run a suspicious email attachment in a restricted, controlled execution environment that blocks it from accessing any system resources except those it is authorized to use. Which technique fits?",
+      "choices": [
+        "Sandboxing",
+        "Deploying a honeypot",
+        "Routing traffic through a jump server",
+        "Placing the file in a screened subnet",
+        "Restoring the file at a hot site"
+      ],
+      "answer_index": 0,
+      "explanation": "CNSSI 4009 (via the NIST glossary) defines sandboxing as a restricted, controlled execution environment that keeps potentially malicious software from reaching unauthorized system resources. A honeypot lures attackers rather than isolating code you choose to run.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: sandbox",
+          "url": "https://csrc.nist.gov/glossary/term/sandbox"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-4004",
+      "domain": "4.0 Security Operations",
+      "question": "Before reissuing a laptop internally, a technician overwrites all user-addressable storage using the drive's standard read/write commands. Under NIST SP 800-88, this protects only against simple, non-invasive recovery. Which sanitization method is this?",
+      "choices": [
+        "Purge",
+        "Destroy",
+        "Degauss",
+        "Clear",
+        "Incinerate"
+      ],
+      "answer_index": 3,
+      "explanation": "NIST SP 800-88 defines Clear as logical sanitization of user-addressable locations through the normal interface, protecting against simple, non-invasive recovery. Purge goes further, making recovery infeasible even with state-of-the-art laboratory techniques.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: clear",
+          "url": "https://csrc.nist.gov/glossary/term/clear"
+        },
+        {
+          "title": "NIST CSRC Glossary: purge",
+          "url": "https://csrc.nist.gov/glossary/term/purge"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-4005",
+      "domain": "4.0 Security Operations",
+      "question": "Employees sign in once with one account and its authenticators and then reach email, the HR portal and the ticketing system seamlessly, typically through a federation protocol. What capability is this?",
+      "choices": [
+        "Multifactor authentication",
+        "Privileged access management",
+        "Role-based access control",
+        "Password vaulting",
+        "Single sign-on"
+      ],
+      "answer_index": 4,
+      "explanation": "NIST SP 800-63-4 defines single sign-on as one account and its authenticators being used to access multiple applications seamlessly, generally via a federation protocol. MFA is about using more than one factor, not about reaching many applications.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: Single Sign-On",
+          "url": "https://csrc.nist.gov/glossary/term/single_sign_on"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-4006",
+      "domain": "4.0 Security Operations",
+      "question": "A vulnerability management team wants to adjust a CVSS v4.0 score so it reflects characteristics that are unique to its own environment. Which CVSS v4.0 metric group should it use?",
+      "choices": [
+        "Base",
+        "Threat",
+        "Environmental",
+        "Supplemental",
+        "Temporal"
+      ],
+      "answer_index": 2,
+      "explanation": "The CVSS v4.0 specification says the Environmental group represents characteristics of a vulnerability unique to a user's environment. Temporal is not a v4.0 group; v4.0 uses Base, Threat, Environmental and Supplemental.",
+      "sources": [
+        {
+          "title": "FIRST CVSS v4.0 Specification Document",
+          "url": "https://www.first.org/cvss/v4.0/specification-document"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-4007",
+      "domain": "4.0 Security Operations",
+      "question": "Ransomware is actively spreading across several hosts. Using the incident handling phases in NIST SP 800-61 Rev. 2, which action is a containment step?",
+      "choices": [
+        "Disconnecting the infected hosts from the network",
+        "Deleting the malware from every affected host",
+        "Restoring systems to normal operation and confirming they function normally",
+        "Establishing and training an incident response team",
+        "Selecting controls based on the results of risk assessments"
+      ],
+      "answer_index": 0,
+      "explanation": "SP 800-61 Rev. 2 lists disconnecting a system from a network as a containment decision, which buys time for a tailored remediation strategy. Deleting malware is eradication, restoring normal operation is recovery, and team training and control selection are preparation.",
+      "sources": [
+        {
+          "title": "NIST SP 800-61 Rev. 2: Computer Security Incident Handling Guide",
+          "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-4008",
+      "domain": "4.0 Security Operations",
+      "question": "Staff with roles in the incident response plan meet in a conference room. A facilitator presents a scenario and asks questions, and participants talk through their roles and responses to validate the plan. What type of exercise is this?",
+      "choices": [
+        "Penetration test",
+        "Failover test",
+        "Full-scale functional exercise",
+        "Parallel processing test",
+        "Tabletop exercise"
+      ],
+      "answer_index": 4,
+      "explanation": "NIST SP 800-84 defines a tabletop exercise as discussion-based: personnel meet, a facilitator presents a scenario, and they validate the plan by discussing their roles. The other options involve actually operating or attacking systems.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: Tabletop Exercise",
+          "url": "https://csrc.nist.gov/glossary/term/tabletop_exercise"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-4009",
+      "domain": "4.0 Security Operations",
+      "question": "A remote worker's laptop is granted network access only after the user's credentials are verified and endpoint health checks pass. Which enterprise security capability provides this?",
+      "choices": [
+        "Data loss prevention (DLP)",
+        "Security information and event management (SIEM)",
+        "DNS filtering",
+        "Network access control (NAC)",
+        "Intrusion detection system (IDS)"
+      ],
+      "answer_index": 3,
+      "explanation": "NIST SP 800-41 Rev. 1 describes NAC as allowing access based on a user's credentials and the results of health checks on the endpoint. SIEM centralizes logging and DLP protects data; neither gates network admission.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: Network Access Control",
+          "url": "https://csrc.nist.gov/glossary/term/network_access_control"
+        },
+        {
+          "title": "NIST CSRC Glossary: Security Information and Event Management",
+          "url": "https://csrc.nist.gov/glossary/term/security_information_and_event_management"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-5001",
+      "domain": "5.0 Security Program Management and Oversight",
+      "question": "A business decides that after any outage, its order database must be recoverable to a state no more than 15 minutes old, which drives how often backups run. Which metric did it define?",
+      "choices": [
+        "Recovery point objective (RPO)",
+        "Recovery time objective (RTO)",
+        "Maximum tolerable downtime (MTD)",
+        "Mean time between failures (MTBF)",
+        "Mean time to repair (MTTR)"
+      ],
+      "answer_index": 0,
+      "explanation": "NIST SP 800-34 Rev. 1 defines RPO as the point in time to which data must be recovered after an outage. RTO and MTD measure how long systems or processes can be down, not how much data can be lost.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: Recovery Point Objective",
+          "url": "https://csrc.nist.gov/glossary/term/recovery_point_objective"
+        },
+        {
+          "title": "NIST CSRC Glossary: Recovery Time Objective",
+          "url": "https://csrc.nist.gov/glossary/term/recovery_time_objective"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-5002",
+      "domain": "5.0 Security Program Management and Oversight",
+      "question": "While building a contingency plan, a team analyzes its operational functions and the effect a disruption might have on each one. Which activity is the team performing?",
+      "choices": [
+        "Maintaining a risk register",
+        "Business impact analysis (BIA)",
+        "Vulnerability scanning",
+        "Tabletop exercise",
+        "Gap analysis"
+      ],
+      "answer_index": 1,
+      "explanation": "NIST SP 800-34 Rev. 1 and CNSSI 4009 define a BIA as the process of analyzing operational functions and the effect a disruption might have on them. A risk register records risks; it does not analyze disruption impact on functions.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: business impact analysis",
+          "url": "https://csrc.nist.gov/glossary/term/business_impact_analysis"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-5003",
+      "domain": "5.0 Security Program Management and Oversight",
+      "question": "A risk manager keeps a central record of the organization's current risks, including risks that were accepted and risks with a planned mitigation path. What is this record called?",
+      "choices": [
+        "Business impact analysis",
+        "Asset inventory",
+        "Risk register",
+        "Service-level agreement",
+        "Rules of engagement"
+      ],
+      "answer_index": 2,
+      "explanation": "NISTIR 8170 defines a risk register as a central record of current risks, made up of accepted risks and risks with a planned mitigation path. An asset inventory tracks assets, not the risks to them.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: Risk Register",
+          "url": "https://csrc.nist.gov/glossary/term/risk_register"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-5004",
+      "domain": "5.0 Security Program Management and Oversight",
+      "question": "Two organizations plan to connect their systems directly. They need a document that specifies the information security requirements for that system interconnection. Which agreement is this?",
+      "choices": [
+        "Service-level agreement (SLA)",
+        "Non-disclosure agreement (NDA)",
+        "Business partners agreement (BPA)",
+        "Interconnection security agreement (ISA)",
+        "End-user license agreement (EULA)"
+      ],
+      "answer_index": 3,
+      "explanation": "NIST SP 800-47 Rev. 1 defines an ISA as a document specifying information security requirements for system interconnections. An SLA sets service performance levels and an NDA covers confidentiality, not interconnection security requirements.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: interconnection security agreement",
+          "url": "https://csrc.nist.gov/glossary/term/interconnection_security_agreement"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-5005",
+      "domain": "5.0 Security Program Management and Oversight",
+      "question": "Before a penetration test begins, the client and the testing firm agree on detailed guidelines and constraints for the testing, which give the testers authority to perform the defined activities without asking for further permission. What is this document?",
+      "choices": [
+        "Non-disclosure agreement",
+        "Acceptable use policy",
+        "Attestation report",
+        "Right-to-audit clause",
+        "Rules of engagement"
+      ],
+      "answer_index": 4,
+      "explanation": "NIST SP 800-115 defines rules of engagement as detailed guidelines and constraints for security testing, set before the test, authorizing defined activities without further permission. An attestation report is an audit output, not a pre-test authorization.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: Rules of Engagement",
+          "url": "https://csrc.nist.gov/glossary/term/rules_of_engagement"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-5006",
+      "domain": "5.0 Security Program Management and Oversight",
+      "question": "Before launching a new customer portal, a company analyzes how personal information will be collected, used, shared and maintained, so it can identify and mitigate privacy risks and confirm it meets legal and regulatory requirements. What is this analysis?",
+      "choices": [
+        "Business impact analysis",
+        "Privacy impact assessment",
+        "Penetration test",
+        "Vulnerability assessment",
+        "Data classification"
+      ],
+      "answer_index": 1,
+      "explanation": "NIST SP 800-63-4 describes a privacy impact assessment as analyzing how personal information is collected, used, shared and maintained to identify and mitigate privacy risks. A BIA analyzes the effect of disruptions on operations, not privacy handling.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: privacy impact assessment",
+          "url": "https://csrc.nist.gov/glossary/term/privacy_impact_assessment"
+        },
+        {
+          "title": "NIST CSRC Glossary: business impact analysis",
+          "url": "https://csrc.nist.gov/glossary/term/business_impact_analysis"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-1001",
+      "domain": "1.0 General Security Concepts",
+      "question": "A legacy plant-floor controller cannot support the multifactor authentication your security baseline requires. Instead, you isolate it behind a jump host with extra monitoring, giving it equivalent protection in place of the required control. What kind of control is this alternative?",
+      "choices": [
+        "Deterrent control",
+        "Directive control",
+        "Compensating control",
+        "Corrective control",
+        "Physical control"
+      ],
+      "answer_index": 2,
+      "explanation": "NIST defines a compensating control as a safeguard used in lieu of a recommended baseline control that provides equivalent or comparable protection. A corrective control fixes things after an incident, and this alternative does not do that.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: compensating security control",
+          "url": "https://csrc.nist.gov/glossary/term/compensating_security_control"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-1002",
+      "domain": "1.0 General Security Concepts",
+      "question": "A vendor digitally signs a purchase agreement. Months later the vendor claims it never approved the agreement. Which security property of the digital signature lets you show that the vendor did sign it?",
+      "choices": [
+        "Confidentiality",
+        "Availability",
+        "Authorization",
+        "Obfuscation",
+        "Non-repudiation"
+      ],
+      "answer_index": 4,
+      "explanation": "Non-repudiation, which typically relies on a digital signature, protects against someone falsely denying an action they took. Confidentiality keeps the content secret, but it does not prove who signed it.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: non-repudiation",
+          "url": "https://csrc.nist.gov/glossary/term/non_repudiation"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-1003",
+      "domain": "1.0 General Security Concepts",
+      "question": "A developer adds a random salt of at least 32 bits to each user's password before hashing it, and stores the salt next to the hash. What is the main purpose of the salt?",
+      "choices": [
+        "It stops two accounts with the same password from storing the same hash value",
+        "It makes the stored hash reversible so an administrator can recover the password",
+        "It works as a secret encryption key that must be kept apart from the hash",
+        "It shortens the hash so it fits in the database column",
+        "It removes the need for a slow password hashing scheme with a cost factor"
+      ],
+      "answer_index": 0,
+      "explanation": "NIST SP 800-63B requires passwords to be salted and hashed so that accounts with the same password do not end up with the same stored hash. The salt is stored openly with the hash and is not a secret key. A cost factor is still required alongside it.",
+      "sources": [
+        {
+          "title": "NIST SP 800-63B-4: Authentication and Authenticator Management",
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b.html"
+        },
+        {
+          "title": "NIST CSRC Glossary: salt",
+          "url": "https://csrc.nist.gov/glossary/term/salt"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-1004",
+      "domain": "1.0 General Security Concepts",
+      "question": "In a NIST SP 800-207 zero trust architecture, which logical component sits in the data path (for example, a gateway in front of a resource) and is responsible for enabling, monitoring, and eventually terminating the connection between a subject and the resource?",
+      "choices": [
+        "Policy engine (PE)",
+        "Policy administrator (PA)",
+        "Trust algorithm",
+        "Policy enforcement point (PEP)",
+        "Continuous diagnostics and mitigation (CDM) system"
+      ],
+      "answer_index": 3,
+      "explanation": "SP 800-207 gives the policy enforcement point the job of enabling, monitoring, and terminating connections, either as a resource-side gateway or a client agent. The policy engine makes the access decision, and the policy administrator passes that decision to the PEP.",
+      "sources": [
+        {
+          "title": "NIST SP 800-207: Zero Trust Architecture",
+          "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf"
+        },
+        {
+          "title": "NIST CSRC Glossary: policy enforcement point",
+          "url": "https://csrc.nist.gov/glossary/term/policy_enforcement_point"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-2001",
+      "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+      "question": "An attacker wants to compromise engineers at a few aerospace firms. Instead of emailing them, the attacker compromises an industry association website the engineers often visit, so that their browsers get exploited when they browse it. What is this technique called?",
+      "choices": [
+        "Typosquatting",
+        "Watering hole attack",
+        "Pretexting",
+        "Credential stuffing",
+        "Vishing"
+      ],
+      "answer_index": 1,
+      "explanation": "MITRE ATT&CK describes compromising a website that a specific community visits, in order to reach users who share that interest, as a watering hole attack (also called strategic web compromise). Typosquatting depends on users mistyping a domain, and this attack does not.",
+      "sources": [
+        {
+          "title": "MITRE ATT&CK T1189: Drive-by Compromise",
+          "url": "https://attack.mitre.org/techniques/T1189/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-2002",
+      "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+      "question": "A code review finds a login query that builds its SQL string by concatenating the username a user typed in. According to OWASP, what is the first-choice primary defense against SQL injection here?",
+      "choices": [
+        "Manually escaping special characters in all user input",
+        "Placing a web application firewall in front of the application",
+        "Suppressing database error messages shown to users",
+        "Using prepared statements with parameterized queries",
+        "Validating the input with client-side JavaScript"
+      ],
+      "answer_index": 3,
+      "explanation": "OWASP lists prepared statements with parameterized queries as Defense Option 1, because bound values are treated as data rather than SQL syntax. It strongly discourages manual escaping as a substitute for parameter binding.",
+      "sources": [
+        {
+          "title": "OWASP SQL Injection Prevention Cheat Sheet",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-2003",
+      "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+      "question": "An attacker posts a product review with an embedded script. The site saves the review in its database, and the script runs in the browser of every customer who later views the product page. Which attack is this?",
+      "choices": [
+        "Stored cross-site scripting (XSS)",
+        "Reflected cross-site scripting (XSS)",
+        "SQL injection",
+        "Cross-site request forgery (CSRF)",
+        "Directory traversal"
+      ],
+      "answer_index": 0,
+      "explanation": "In stored XSS, the injected script is saved on the target server (for example in a database or comment field) and served to every user who loads that content. In reflected XSS, the script bounces off the server in a single crafted request and is not stored.",
+      "sources": [
+        {
+          "title": "OWASP: Cross Site Scripting (XSS)",
+          "url": "https://community.owasp.org/attacks/xss"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-2004",
+      "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+      "question": "A privileged program checks that a user may write to a file, then opens it a moment later. In that gap, an attacker replaces the file with a link to a sensitive system file, and the program writes to the system file. Which vulnerability type is this?",
+      "choices": [
+        "Buffer overflow",
+        "Memory leak",
+        "Time-of-check to time-of-use (TOCTOU) race condition",
+        "Integer overflow",
+        "Null pointer dereference"
+      ],
+      "answer_index": 2,
+      "explanation": "CWE-367 describes a TOCTOU race condition: the product checks a resource's state before using it, and the state changes between the check and the use. The other choices are memory or arithmetic errors that do not depend on that timing gap.",
+      "sources": [
+        {
+          "title": "MITRE CWE-367: Time-of-check Time-of-use (TOCTOU) Race Condition",
+          "url": "https://cwe.mitre.org/data/definitions/367.html"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-2005",
+      "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+      "question": "Over one hour, authentication logs show a single failed login against each of about 400 different accounts. Every attempt used the same common password, and no account reached its lockout threshold. Which attack does this pattern most likely show?",
+      "choices": [
+        "Brute force against a single account",
+        "Pass the hash",
+        "Rainbow table attack",
+        "Birthday attack",
+        "Password spraying"
+      ],
+      "answer_index": 4,
+      "explanation": "MITRE ATT&CK describes password spraying as trying one or a few common passwords against many accounts, which avoids the lockouts that come from brute forcing a single account. A single-account brute force would show many failures on one account.",
+      "sources": [
+        {
+          "title": "MITRE ATT&CK T1110.003: Brute Force: Password Spraying",
+          "url": "https://attack.mitre.org/techniques/T1110/003/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-2006",
+      "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+      "question": "Your library's public kiosks run a fixed, known set of applications. You want to stop any unapproved executable, including new ransomware no one has seen before, from running on them. Which mitigation fits best?",
+      "choices": [
+        "Full-disk encryption",
+        "Application allowlisting",
+        "Data loss prevention (DLP)",
+        "Port mirroring",
+        "Centralized log aggregation"
+      ],
+      "answer_index": 1,
+      "explanation": "Application allowlisting permits only the applications and components authorized by a defined baseline, so unknown executables are blocked by default. Full-disk encryption protects data at rest, and it does nothing to stop a program from running.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: application allowlisting",
+          "url": "https://csrc.nist.gov/glossary/term/application_allowlisting"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-2007",
+      "domain": "2.0 Threats, Vulnerabilities, and Mitigations",
+      "question": "After compromising a workstation, an attacker dumps NTLM password hashes from memory. Without cracking them, the attacker uses those hashes to log in to other servers as the victim user. What technique is this?",
+      "choices": [
+        "Password spraying",
+        "Rainbow table attack",
+        "Dictionary attack",
+        "Pass the hash",
+        "Shoulder surfing"
+      ],
+      "answer_index": 3,
+      "explanation": "MITRE ATT&CK defines pass the hash as authenticating as a user without the cleartext password, by supplying the password hash directly. Rainbow table and dictionary attacks try to recover the cleartext password, which this attacker never does.",
+      "sources": [
+        {
+          "title": "MITRE ATT&CK T1550.002: Use Alternate Authentication Material: Pass the Hash",
+          "url": "https://attack.mitre.org/techniques/T1550/002/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-3001",
+      "domain": "3.0 Security Architecture",
+      "question": "Under the AWS shared responsibility model, who is responsible for applying security patches to the guest operating system of an Amazon EC2 instance?",
+      "choices": [
+        "The customer",
+        "AWS, because it manages the hypervisor and physical hosts",
+        "AWS for critical patches only, with the customer handling the rest",
+        "AWS and the customer jointly, through automatic patching in maintenance windows",
+        "No one, because EC2 instances cannot be changed once launched"
+      ],
+      "answer_index": 0,
+      "explanation": "AWS secures the infrastructure that runs its cloud services. The customer manages the EC2 guest operating system, including updates and security patches, and configures the security group firewall.",
+      "sources": [
+        {
+          "title": "AWS Shared Responsibility Model",
+          "url": "https://aws.amazon.com/compliance/shared-responsibility-model/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-3002",
+      "domain": "3.0 Security Architecture",
+      "question": "A company needs to host a public-facing web server. The server must be reachable from the internet, but kept apart from the trusted internal LAN by firewalls. Where should the server go?",
+      "choices": [
+        "On the internal intranet segment beside the file servers",
+        "On a VLAN trunk shared with user workstations",
+        "In a screened subnet (DMZ)",
+        "On an air-gapped network",
+        "In a honeynet"
+      ],
+      "answer_index": 2,
+      "explanation": "NIST describes a DMZ, or screened subnet, as a perimeter network segment between the trusted internal network and the less-trusted external network. Externally accessible systems that need some protection are usually placed there. An air-gapped network would make the server unreachable from the internet.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: demilitarized zone",
+          "url": "https://csrc.nist.gov/glossary/term/demilitarized_zone"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-3003",
+      "domain": "3.0 Security Architecture",
+      "question": "To shrink its PCI DSS scope, a merchant replaces each primary account number (PAN) in its order database with a surrogate value. The real PAN can be retrieved only through a separate, tightly secured system. Which data protection method is this?",
+      "choices": [
+        "Hashing",
+        "Data masking",
+        "Steganography",
+        "Obfuscation",
+        "Tokenization"
+      ],
+      "answer_index": 4,
+      "explanation": "The PCI SSC defines tokenization as replacing the PAN with a surrogate value called a token, which the separate system can map back to the PAN. Hashing is one-way, so there is no original to retrieve. Masking only hides digits when the number is displayed.",
+      "sources": [
+        {
+          "title": "PCI SSC Information Supplement: PCI DSS Tokenization Guidelines",
+          "url": "https://listings.pcisecuritystandards.org/documents/Tokenization_Guidelines_Info_Supplement.pdf"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-3004",
+      "domain": "3.0 Security Architecture",
+      "question": "During business impact analysis, the finance team says it can afford to lose no more than the last four hours of transaction data after an outage. Which recovery metric does that four-hour figure set?",
+      "choices": [
+        "Recovery time objective (RTO)",
+        "Recovery point objective (RPO)",
+        "Mean time between failures (MTBF)",
+        "Mean time to repair (MTTR)",
+        "Service level agreement (SLA) uptime percentage"
+      ],
+      "answer_index": 1,
+      "explanation": "The RPO is the point in time to which data must be recovered, which sets how much recent data the business can afford to lose. The RTO measures how long systems can stay in recovery before the mission is harmed.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: Recovery Point Objective",
+          "url": "https://csrc.nist.gov/glossary/term/recovery_point_objective"
+        },
+        {
+          "title": "NIST CSRC Glossary: Recovery Time Objective",
+          "url": "https://csrc.nist.gov/glossary/term/recovery_time_objective"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-3005",
+      "domain": "3.0 Security Architecture",
+      "question": "An organization leases an alternate facility with power, cooling, and network links, and some of its servers and telecom gear already installed. The site still needs extra equipment and current data before it can take over operations. What type of recovery site is this?",
+      "choices": [
+        "Hot site",
+        "Cold site",
+        "Data lake",
+        "Warm site",
+        "Honeypot"
+      ],
+      "answer_index": 3,
+      "explanation": "NIST SP 800-34 defines a warm site as an environmentally conditioned work space that is partially equipped with systems and telecommunications. A hot site is fully equipped with hardware and software, while a cold site has the electrical and physical components but no computer equipment yet.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: warm site",
+          "url": "https://csrc.nist.gov/glossary/term/warm_site"
+        },
+        {
+          "title": "NIST CSRC Glossary: hot site",
+          "url": "https://csrc.nist.gov/glossary/term/hot_site"
+        },
+        {
+          "title": "NIST CSRC Glossary: cold site",
+          "url": "https://csrc.nist.gov/glossary/term/cold_site"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "secplus-3006",
+      "domain": "3.0 Security Architecture",
+      "question": "A site-to-site VPN must keep the contents of IP packets confidential, not just authenticate them. Which IPsec protocol provides encryption of the protected traffic?",
+      "choices": [
+        "Authentication Header (AH)",
+        "Encapsulating Security Payload (ESP)",
+        "Generic Routing Encapsulation (GRE)",
+        "Internet Control Message Protocol (ICMP)",
+        "Address Resolution Protocol (ARP)"
+      ],
+      "answer_index": 1,
+      "explanation": "RFC 4303 says ESP can provide confidentiality, along with data origin authentication, integrity, and anti-replay. RFC 4302 limits AH to connectionless integrity and data origin authentication, so AH does not encrypt.",
+      "sources": [
+        {
+          "title": "RFC 4303: IP Encapsulating Security Payload (ESP)",
+          "url": "https://www.rfc-editor.org/rfc/rfc4303.html"
+        },
+        {
+          "title": "RFC 4302: IP Authentication Header",
+          "url": "https://www.rfc-editor.org/rfc/rfc4302.html"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    }
+  ],
+  "version": "2026-10-28"
+}
