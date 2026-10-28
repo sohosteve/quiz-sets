@@ -747,6 +747,450 @@
       ],
       "verified_at": "2026-10-28",
       "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1103",
+      "domain": "220-1201 1.0 Mobile Devices",
+      "question": "A user's iPhone has almost no cellular signal inside their office, but the office Wi-Fi is strong. Which iPhone feature lets them place and receive ordinary voice calls over that Wi-Fi network?",
+      "choices": [
+        "Personal Hotspot",
+        "AirDrop",
+        "Wi-Fi Calling",
+        "Low Data Mode",
+        "Airplane Mode"
+      ],
+      "answer_index": 2,
+      "explanation": "Apple describes Wi-Fi Calling as the way to make or receive voice calls over Wi-Fi when there is little or no cellular coverage; it is turned on under Settings > Cellular > Wi-Fi Calling. Personal Hotspot does the reverse, sharing the phone's cellular data with other devices, so it does not carry the phone's own calls over Wi-Fi.",
+      "sources": [
+        {
+          "title": "Make a call with Wi-Fi Calling - Apple Support",
+          "url": "https://support.apple.com/en-us/108066"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1205",
+      "domain": "220-1201 2.0 Networking",
+      "question": "Which of these IPv4 addresses falls inside one of the private address blocks reserved by RFC 1918?",
+      "choices": [
+        "172.32.10.5",
+        "192.169.1.20",
+        "11.0.0.1",
+        "172.20.4.9",
+        "169.254.8.8"
+      ],
+      "answer_index": 3,
+      "explanation": "RFC 1918 reserves 10.0.0.0/8, 172.16.0.0/12 (172.16.0.0 through 172.31.255.255) and 192.168.0.0/16, so 172.20.4.9 is private. 172.32.10.5 sits just past the end of the 172.16/12 block, and 169.254.x.x is the link-local (APIPA) range, not an RFC 1918 block.",
+      "sources": [
+        {
+          "title": "RFC 1918: Address Allocation for Private Internets",
+          "url": "https://www.rfc-editor.org/rfc/rfc1918"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1206",
+      "domain": "220-1201 2.0 Networking",
+      "question": "A network monitoring server must receive unsolicited SNMP trap messages from switches and printers. Which well-known port should be allowed to reach the server?",
+      "choices": [
+        "162",
+        "161",
+        "143",
+        "514",
+        "123"
+      ],
+      "answer_index": 0,
+      "explanation": "IANA assigns port 162 to snmptrap, the port a manager listens on for traps sent by agents. Port 161 is the SNMP port used for get and set requests sent to the agent, not for incoming traps.",
+      "sources": [
+        {
+          "title": "IANA Service Name and Transport Protocol Port Number Registry",
+          "url": "https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1305",
+      "domain": "220-1201 3.0 Hardware",
+      "question": "According to Intel's Rapid Storage Technology documentation, how is a RAID 10 volume built, and what is its minimum drive count?",
+      "choices": [
+        "Two RAID 0 arrays mirrored together; minimum of three drives",
+        "A single mirrored pair with distributed parity; minimum of two drives",
+        "A RAID 0 array formed from two RAID 1 arrays; minimum of four drives",
+        "Striping with two independent parity blocks; minimum of four drives",
+        "Ten drives striped with no redundancy; minimum of ten drives"
+      ],
+      "answer_index": 2,
+      "explanation": "Intel describes RAID 10 as a RAID 0 stripe built across two RAID 1 mirrors, which needs at least four drives and yields the capacity of half the drives. Striping with two parity blocks describes RAID 6, not RAID 10.",
+      "sources": [
+        {
+          "title": "Defining RAID Volumes for Intel Rapid Storage Technology",
+          "url": "https://www.intel.com/content/www/us/en/support/articles/000005867/technologies.html"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1306",
+      "domain": "220-1201 3.0 Hardware",
+      "question": "With UEFI Secure Boot enabled, what does the firmware do before handing control to the operating system?",
+      "choices": [
+        "Encrypts the system drive with a key stored in the TPM",
+        "Checks the digital signature of each piece of boot software against trusted keys",
+        "Runs a full memory test and halts on any error",
+        "Downloads the latest firmware from the OEM before every boot",
+        "Requires the user to enter a supervisor password"
+      ],
+      "answer_index": 1,
+      "explanation": "Microsoft explains that with Secure Boot the firmware verifies the signature of each boot component (UEFI drivers, EFI applications and the OS loader) and boots only if the signatures are valid. Drive encryption with a TPM-held key is what BitLocker does; Secure Boot itself does not encrypt anything.",
+      "sources": [
+        {
+          "title": "Secure boot - Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-secure-boot"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1307",
+      "domain": "220-1201 3.0 Hardware",
+      "question": "Which description best matches a Trusted Platform Module (TPM)?",
+      "choices": [
+        "A firmware setting that selects the boot order of attached drives",
+        "A removable USB token that stores a user's passwords",
+        "A tamper-resistant crypto-processor that generates and stores cryptographic keys and records boot measurements",
+        "A coprocessor that accelerates graphics and video decoding",
+        "A battery-backed chip that keeps the real-time clock and BIOS settings"
+      ],
+      "answer_index": 2,
+      "explanation": "Microsoft defines the TPM as a secure, tamper-resistant crypto-processor that generates, stores and limits use of keys and stores measurements of the boot process. The battery-backed chip that keeps clock and BIOS settings is the CMOS/RTC, a different component.",
+      "sources": [
+        {
+          "title": "Trusted Platform Module Technology Overview - Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows/security/hardware-security/tpm/trusted-platform-module-overview"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1403",
+      "domain": "220-1201 4.0 Virtualization and Cloud Computing",
+      "question": "Several hospitals with the same regulatory and compliance requirements share a cloud infrastructure provisioned only for their group. Which NIST SP 800-145 deployment model is this?",
+      "choices": [
+        "Public cloud",
+        "Private cloud",
+        "Hybrid cloud",
+        "Multitenant SaaS",
+        "Community cloud"
+      ],
+      "answer_index": 4,
+      "explanation": "NIST defines a community cloud as infrastructure provisioned for exclusive use by a specific community of organizations with shared concerns such as security, policy and compliance. A private cloud serves a single organization, not a group of separate organizations.",
+      "sources": [
+        {
+          "title": "Community cloud - NIST CSRC Glossary (from SP 800-145)",
+          "url": "https://csrc.nist.gov/glossary/term/community_cloud"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1505",
+      "domain": "220-1201 5.0 Hardware and Network Troubleshooting",
+      "question": "On a Windows PC set to obtain its address automatically, what does running ipconfig /release do?",
+      "choices": [
+        "Sends a DHCPRELEASE message to the DHCP server and discards the adapter's current IP configuration",
+        "Clears the DNS client resolver cache",
+        "Requests a new lease from the DHCP server",
+        "Re-registers the computer's name and IP address in DNS",
+        "Displays the full TCP/IP configuration for all adapters"
+      ],
+      "answer_index": 0,
+      "explanation": "Microsoft documents /release as sending DHCPRELEASE and discarding the IPv4 configuration; /renew is the separate switch that requests a new lease. Clearing the resolver cache is /flushdns, and re-registering in DNS is /registerdns.",
+      "sources": [
+        {
+          "title": "ipconfig - Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1506",
+      "domain": "220-1201 5.0 Hardware and Network Troubleshooting",
+      "question": "In tracert output, a hop shows a row of asterisks (* * *) and \"Request timed out.\" According to Microsoft, what does that usually indicate?",
+      "choices": [
+        "The destination host name could not be resolved by DNS",
+        "The local network adapter has no default gateway",
+        "The router at that hop did not return an ICMP Time Exceeded message before the timeout",
+        "The trace exceeded the 30-hop maximum and stopped",
+        "The packet was fragmented because the MTU was too small"
+      ],
+      "answer_index": 2,
+      "explanation": "tracert sends echo requests with increasing TTL values and lists each router that returns an ICMP Time Exceeded message; some routers do not return that message and appear only as asterisks. A DNS failure would stop tracert before any hops were listed, not produce a single silent hop.",
+      "sources": [
+        {
+          "title": "tracert - Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tracert"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1507",
+      "domain": "220-1201 5.0 Hardware and Network Troubleshooting",
+      "question": "A laptop runs at full speed for a few minutes, then its reported CPU clock speed drops sharply under load. Its fan is clogged with dust. What is the processor doing?",
+      "choices": [
+        "Entering S3 sleep to save battery",
+        "Thermal throttling: lowering its clock speed because it has exceeded its maximum safe temperature",
+        "Turbo boosting to compensate for the extra load",
+        "Disabling hyper-threading after a memory error",
+        "Switching to the integrated GPU for rendering"
+      ],
+      "answer_index": 1,
+      "explanation": "Intel describes throttling as a mechanism that reduces the processor's clock speed when temperature rises above TJ Max, so poor cooling such as a dust-clogged fan causes it. Turbo boost would raise the clock speed, the opposite of what is observed.",
+      "sources": [
+        {
+          "title": "What Is Throttling and How Can It Be Resolved? - Intel Support",
+          "url": "https://www.intel.com/content/www/us/en/support/articles/000088048/processors.html"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2106",
+      "domain": "220-1202 1.0 Operating Systems",
+      "question": "A user cannot copy a 6 GB video file to a USB flash drive even though the drive has 30 GB free. Which file system on the flash drive most likely explains this?",
+      "choices": [
+        "NTFS",
+        "exFAT",
+        "FAT32",
+        "UDF",
+        "ReFS"
+      ],
+      "answer_index": 2,
+      "explanation": "FAT32 limits any single file to 4 GiB, so a 6 GB file cannot be written no matter how much free space remains. exFAT and NTFS both allow files up to 2^64-1 bytes, so either would accept the file.",
+      "sources": [
+        {
+          "title": "File System Functionality Comparison - Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/filesystem-functionality-comparison"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2107",
+      "domain": "220-1202 1.0 Operating Systems",
+      "question": "A technician needs to connect with Remote Desktop to an office PC. Which requirement does Microsoft list for the PC being connected TO?",
+      "choices": [
+        "It must run a Pro edition of Windows",
+        "It must run Windows Home with the Remote Desktop app installed",
+        "It must be joined to Microsoft Entra ID",
+        "It must run the same Windows edition as the client device",
+        "It must have Windows Defender Firewall turned off"
+      ],
+      "answer_index": 0,
+      "explanation": "Microsoft states the remote PC you connect to must run a Pro edition, while the device you connect from can run Home, Pro, or even another operating system. A Home edition PC cannot host Remote Desktop sessions and must be upgraded first.",
+      "sources": [
+        {
+          "title": "How to use Remote Desktop - Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/how-to-use-remote-desktop-5fe128d5-8fb1-7a23-3b8a-41e636865e8c"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2108",
+      "domain": "220-1202 1.0 Operating Systems",
+      "question": "On a Linux workstation, which command changes a file's permission (mode) bits, for example to make a script executable?",
+      "choices": [
+        "chown",
+        "grep",
+        "sudo",
+        "chgrp",
+        "chmod"
+      ],
+      "answer_index": 4,
+      "explanation": "chmod changes file mode bits, which hold the read, write, and execute permissions. chown and chgrp change a file's owner and group rather than its permission bits.",
+      "sources": [
+        {
+          "title": "chmod(1) - Linux manual page",
+          "url": "https://man7.org/linux/man-pages/man1/chmod.1.html"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2206",
+      "domain": "220-1202 2.0 Security",
+      "question": "A user has Full Control share permission on a shared folder but only Read NTFS permission on the same folder. What effective access does the user have when opening the folder over the network?",
+      "choices": [
+        "Full Control",
+        "Read",
+        "Change",
+        "Modify",
+        "No access"
+      ],
+      "answer_index": 1,
+      "explanation": "When a folder is accessed over the network, Windows evaluates both the share and NTFS permissions and applies the more restrictive of the two, which here is Read. Full Control would only apply if both sets granted it.",
+      "sources": [
+        {
+          "title": "Managing Permissions for Shared Folders - Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753731(v=ws.11)"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2207",
+      "domain": "220-1202 2.0 Security",
+      "question": "A help desk technician is given only the rights needed to reset passwords, not full domain administrator rights. Which security principle does this follow?",
+      "choices": [
+        "Defense in depth",
+        "Network segmentation",
+        "Implicit trust",
+        "Least privilege",
+        "Security through obscurity"
+      ],
+      "answer_index": 3,
+      "explanation": "NIST defines least privilege as restricting access privileges to the minimum necessary to accomplish assigned tasks. Defense in depth is about layering multiple controls, not about limiting one account's rights.",
+      "sources": [
+        {
+          "title": "least privilege - NIST CSRC Glossary",
+          "url": "https://csrc.nist.gov/glossary/term/least_privilege"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2208",
+      "domain": "220-1202 2.0 Security",
+      "question": "An employee receives a phone call from someone claiming to be from the bank's fraud department who asks the employee to read back an account number. What type of social engineering attack is this?",
+      "choices": [
+        "Smishing",
+        "Whaling",
+        "Vishing",
+        "Tailgating",
+        "Shoulder surfing"
+      ],
+      "answer_index": 2,
+      "explanation": "CISA defines vishing as social engineering that uses voice communication, which matches a fraudulent phone call. Smishing uses SMS text messages instead of voice.",
+      "sources": [
+        {
+          "title": "Avoiding Social Engineering and Phishing Attacks - CISA",
+          "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2305",
+      "domain": "220-1202 3.0 Software Troubleshooting",
+      "question": "A technician suspects someone has been signing in to a workstation after hours. In Event Viewer, which log records event 4624, \"An account was successfully logged on\"?",
+      "choices": [
+        "Application",
+        "System",
+        "Setup",
+        "Forwarded Events",
+        "Security"
+      ],
+      "answer_index": 4,
+      "explanation": "Logon success and failure events such as 4624 and 4625 are audit events generated by Microsoft-Windows-Security-Auditing and written to the Security log. The System log holds events from Windows components and drivers, not logon audits.",
+      "sources": [
+        {
+          "title": "4624(S) An account was successfully logged on - Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624"
+        },
+        {
+          "title": "Audit Logon - Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2306",
+      "domain": "220-1202 3.0 Software Troubleshooting",
+      "question": "Microsoft recommends running a command before System File Checker so that SFC has healthy source files to repair corrupted system files. Which command is it?",
+      "choices": [
+        "DISM.exe /Online /Cleanup-image /Restorehealth",
+        "chkdsk C: /f",
+        "bootrec /fixmbr",
+        "gpupdate /force",
+        "defrag C: /O"
+      ],
+      "answer_index": 0,
+      "explanation": "Microsoft says to run DISM with /Restorehealth before SFC because DISM provides the files needed to repair corruption, by default from Windows Update. chkdsk checks the file system and disk, not the Windows component store.",
+      "sources": [
+        {
+          "title": "Use the System File Checker tool to repair missing or corrupted system files - Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2404",
+      "domain": "220-1202 4.0 Operational Procedures",
+      "question": "An organization requires that every modification to server firmware, software, and related documentation be controlled so systems are protected from improper changes. What does NIST call this process?",
+      "choices": [
+        "Continuous monitoring",
+        "Configuration control",
+        "Chain of custody",
+        "Risk acceptance",
+        "Data sanitization"
+      ],
+      "answer_index": 1,
+      "explanation": "NIST defines configuration control as the process of controlling modifications to hardware, firmware, software, and documentation to protect the system from improper modifications. Continuous monitoring watches security status over time but does not govern changes.",
+      "sources": [
+        {
+          "title": "configuration control - NIST CSRC Glossary",
+          "url": "https://csrc.nist.gov/glossary/term/configuration_control"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2405",
+      "domain": "220-1202 4.0 Operational Procedures",
+      "question": "A technician collects a hard drive that may hold evidence of a policy violation. Which process documents who handled the drive, when it was collected or transferred, and why each transfer happened?",
+      "choices": [
+        "Change management",
+        "Acceptable use policy",
+        "Data retention",
+        "Chain of custody",
+        "Asset tagging"
+      ],
+      "answer_index": 3,
+      "explanation": "NIST defines chain of custody as tracking evidence through collection, safeguarding, and analysis, recording each handler, the timing, and the purpose of each transfer. Asset tagging identifies equipment for inventory but does not record evidence handling.",
+      "sources": [
+        {
+          "title": "chain of custody - NIST CSRC Glossary",
+          "url": "https://csrc.nist.gov/glossary/term/chain_of_custody"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
     }
   ],
   "version": "2026-10-28"
