@@ -1191,6 +1191,450 @@
       ],
       "verified_at": "2026-10-28",
       "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1104",
+      "domain": "220-1201 1.0 Mobile Devices",
+      "question": "A user turns on Bluetooth in iPhone Settings, but a new third-party headset never shows up in the device list. Per Apple, what should the user do next?",
+      "choices": [
+        "Turn on Personal Hotspot so the headset can join the phone's network",
+        "Reset all network settings, which is required before every new pairing",
+        "Put the headset into discoverable (pairing) mode using its manual's instructions",
+        "Enable Airplane Mode, since Bluetooth only pairs when cellular radios are off",
+        "Install a configuration profile through MDM to whitelist the headset"
+      ],
+      "answer_index": 2,
+      "explanation": "An iPhone can only list a Bluetooth accessory that is advertising itself, so the accessory must be made discoverable, often by holding a pairing button as its manual describes. Resetting network settings or using Personal Hotspot has nothing to do with Bluetooth discovery.",
+      "sources": [
+        {
+          "title": "Apple Support: Pair a third-party Bluetooth accessory with your iPhone or iPad",
+          "url": "https://support.apple.com/en-us/HT204091"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1207",
+      "domain": "220-1201 2.0 Networking",
+      "question": "According to RFC 6409, which TCP port is normally used when an email client submits outgoing mail to its mail server for delivery?",
+      "choices": [
+        "587",
+        "25",
+        "110",
+        "143",
+        "993"
+      ],
+      "answer_index": 0,
+      "explanation": "RFC 6409 defines message submission, which normally runs over port 587. Port 25 stays in use for message relay between mail servers, which is why it is the most tempting wrong answer.",
+      "sources": [
+        {
+          "title": "RFC 6409: Message Submission for Mail",
+          "url": "https://www.rfc-editor.org/rfc/rfc6409.html"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1208",
+      "domain": "220-1201 2.0 Networking",
+      "question": "A firewall administrator wants to block modern Windows file sharing (SMB) traffic from leaving the network. Per Microsoft, which port does SMB itself use?",
+      "choices": [
+        "UDP 137",
+        "TCP 139",
+        "TCP 3389",
+        "TCP 445",
+        "UDP 138"
+      ],
+      "answer_index": 3,
+      "explanation": "Microsoft lists SMB as TCP 445. TCP 139 is the NetBIOS Session Service and UDP 137/138 are NetBIOS name and datagram services, which are older transports rather than SMB's own port.",
+      "sources": [
+        {
+          "title": "Microsoft Support: Guidelines for blocking specific firewall ports to prevent SMB traffic from leaving the corporate environment",
+          "url": "https://support.microsoft.com/en-us/help/3185535/guidelines-for-blocking-specific-firewall-ports-to-prevent-smb-traffic"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1308",
+      "domain": "220-1201 3.0 Hardware",
+      "question": "A workstation uses two drives in an Intel RAID 0 volume. One drive fails. According to Intel, what happens to the data?",
+      "choices": [
+        "The surviving drive keeps a full copy, so all data remains available",
+        "The array rebuilds automatically from parity stored on the surviving drive",
+        "Only the files stored on the failed drive are lost",
+        "The volume switches to read-only mode until the drive is replaced",
+        "All data on both drives is lost, because RAID 0 stores no redundancy"
+      ],
+      "answer_index": 4,
+      "explanation": "RAID 0 stripes data across drives and stores no redundancy information, so losing any member destroys the whole volume. Keeping a full copy on the surviving drive describes RAID 1 mirroring, not RAID 0.",
+      "sources": [
+        {
+          "title": "Intel Support: Defining RAID Volumes for Intel Rapid Storage Technology",
+          "url": "https://www.intel.com/content/www/us/en/support/articles/000005867.html"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1309",
+      "domain": "220-1201 3.0 Hardware",
+      "question": "A technician builds an Intel RAID 1 volume from two 2 TB drives. How much usable space will the operating system see?",
+      "choices": [
+        "4 TB, the combined capacity of both drives",
+        "2 TB, the size of one drive in the array",
+        "1 TB, because half of each drive holds parity",
+        "3 TB, with one-quarter reserved for mirroring metadata",
+        "6 TB, because data is compressed across the mirror"
+      ],
+      "answer_index": 1,
+      "explanation": "RAID 1 writes identical data to both drives, so usable space equals the size of one drive. Combining both capacities (4 TB) is how RAID 0 striping behaves, not mirroring.",
+      "sources": [
+        {
+          "title": "Intel Support: Defining RAID Volumes for Intel Rapid Storage Technology",
+          "url": "https://www.intel.com/content/www/us/en/support/articles/000005867.html"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1310",
+      "domain": "220-1201 3.0 Hardware",
+      "question": "A technician drags a fingernail firmly across a roll of labels for a Zebra thermal printer and a black mark appears. Per Zebra, what does this mean?",
+      "choices": [
+        "The media is thermal transfer stock and a ribbon is required",
+        "The printhead is overheating and must be cleaned",
+        "The labels are inkjet stock and will not work in a thermal printer",
+        "The media is direct thermal and no ribbon is required",
+        "The roll is laser label stock that needs a fuser to bond the image"
+      ],
+      "answer_index": 3,
+      "explanation": "Direct thermal media is heat-sensitive, so a firm, quick scratch darkens it; such media needs no ribbon. If no mark appears, the media is thermal transfer and needs a ribbon, which is the opposite case.",
+      "sources": [
+        {
+          "title": "Zebra GK888t User Guide: Determining Thermal Media Types",
+          "url": "https://docs.zebra.com/us/en/printers/desktop/gk888t-desktop-thermal-printer-user-guide/c-gk888t-ug-print-operations/r-gk888t-ug-print-media-types/t-gk888t-ug-determining-thermal-media-types.html"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1404",
+      "domain": "220-1201 4.0 Virtualization and Cloud Computing",
+      "question": "In NIST SP 800-145, which essential cloud characteristic describes the provider metering resource usage so it can be monitored, controlled, and reported to both provider and consumer?",
+      "choices": [
+        "Measured service",
+        "Resource pooling",
+        "Broad network access",
+        "On-demand self-service",
+        "Rapid elasticity"
+      ],
+      "answer_index": 0,
+      "explanation": "Measured service is the characteristic built on a metering capability that makes usage transparent to both parties. On-demand self-service instead means a consumer can provision capabilities without human interaction with the provider.",
+      "sources": [
+        {
+          "title": "NIST CSRC Glossary: measured service",
+          "url": "https://csrc.nist.gov/glossary/term/measured_service"
+        },
+        {
+          "title": "NIST CSRC Glossary: on-demand self-service",
+          "url": "https://csrc.nist.gov/glossary/term/on_demand_self_service"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1508",
+      "domain": "220-1201 5.0 Hardware and Network Troubleshooting",
+      "question": "A technician runs nslookup with -type=MX against a valid domain and gets the error \"No records.\" Per Microsoft, what does this error mean?",
+      "choices": [
+        "The domain name does not exist in DNS",
+        "No DNS name server is running on the target server",
+        "The DNS server has no resource records of the queried type for that name, although the name is valid",
+        "The DNS server refused to answer the request",
+        "The request packet was malformed, which indicates a bug in nslookup"
+      ],
+      "answer_index": 2,
+      "explanation": "Microsoft defines \"No records\" as a valid name that simply lacks records of the current query type. A name that does not exist returns \"Nonexistent domain\" instead.",
+      "sources": [
+        {
+          "title": "Microsoft Learn: nslookup",
+          "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/nslookup"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1509",
+      "domain": "220-1201 5.0 Hardware and Network Troubleshooting",
+      "question": "A Dell laptop's lithium-ion battery is visibly swollen and the case is bulging. What does Dell recommend as the first step?",
+      "choices": [
+        "Pry the battery out with a plastic spudger before it swells further",
+        "Press the case closed to keep pressure off the internal components",
+        "Keep the laptop on AC power so the battery stays fully charged",
+        "Puncture the battery casing to release the trapped gas",
+        "Stop using the laptop, unplug the AC adapter, and let the battery drain"
+      ],
+      "answer_index": 4,
+      "explanation": "Dell says to discontinue use and discharge the battery by disconnecting AC power, then replace it. Prying, pressing, or puncturing the battery is explicitly forbidden because damaging a lithium-ion cell can be dangerous.",
+      "sources": [
+        {
+          "title": "Dell: Handling swollen Lithium-ion batteries",
+          "url": "https://www.dell.com/support/manuals/en-us/alienware-15-r2/swollenbattery"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1510",
+      "domain": "220-1201 5.0 Hardware and Network Troubleshooting",
+      "question": "An older Dell desktop shows the wrong date and time each time it is powered on, and its BIOS settings keep reverting. Which component is the most likely cause?",
+      "choices": [
+        "A failing power supply unit",
+        "A failing CMOS (coin cell) battery",
+        "A corrupted Windows time service",
+        "A failing system fan",
+        "A loose SATA data cable"
+      ],
+      "answer_index": 1,
+      "explanation": "Dell lists wrong or slow BIOS date and time and lost BIOS settings after power-off as signs of a failing CMOS battery, which keeps the clock and settings alive while the PC is off. A Windows time service problem would not wipe BIOS settings.",
+      "sources": [
+        {
+          "title": "Dell: How to Replace or Change a CMOS Battery on Your Dell Desktop",
+          "url": "https://www.dell.com/support/kbdoc/en-us/000135183/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2109",
+      "domain": "220-1202 1.0 Operating Systems",
+      "question": "According to Microsoft's published Windows 11 specifications, which Trusted Platform Module version is the minimum requirement?",
+      "choices": [
+        "TPM 1.0",
+        "TPM 1.2",
+        "No TPM is required",
+        "TPM 2.0",
+        "TPM 3.0"
+      ],
+      "answer_index": 3,
+      "explanation": "Microsoft lists Trusted Platform Module version 2.0 as a Windows 11 system requirement. TPM 1.2 is enough for BitLocker's integrity checks but does not meet the Windows 11 minimum.",
+      "sources": [
+        {
+          "title": "Windows 11 Specs and System Requirements | Microsoft",
+          "url": "https://www.microsoft.com/en-us/windows/windows-11-specifications"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2110",
+      "domain": "220-1202 1.0 Operating Systems",
+      "question": "A Linux administrator needs to see how much space is used and available on each mounted file system, shown in human-readable units. Which command fits?",
+      "choices": [
+        "ps -ef",
+        "df -h",
+        "free -h",
+        "ls -lh",
+        "uname -a"
+      ],
+      "answer_index": 1,
+      "explanation": "The GNU df command reports file system space usage, and its -h option prints sizes in powers of 1024 such as 1023M. The free command reports memory usage, not disk space.",
+      "sources": [
+        {
+          "title": "df(1) - Linux manual page (man7.org)",
+          "url": "https://man7.org/linux/man-pages/man1/df.1.html"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2111",
+      "domain": "220-1202 1.0 Operating Systems",
+      "question": "Which built-in macOS feature backs up a Mac's apps, music, photos, email, and documents to an external storage device such as a USB or Thunderbolt drive?",
+      "choices": [
+        "Spotlight",
+        "Keychain Access",
+        "Boot Camp Assistant",
+        "Mission Control",
+        "Time Machine"
+      ],
+      "answer_index": 4,
+      "explanation": "Apple Support describes Time Machine as the built-in way to back up files, including apps, music, photos, email, and documents, to an external storage device. Spotlight is a search feature and does not make backups.",
+      "sources": [
+        {
+          "title": "Back up your Mac with Time Machine - Apple Support",
+          "url": "https://support.apple.com/en-us/104984"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2209",
+      "domain": "220-1202 2.0 Security",
+      "question": "An attacker who has already gained root-level access installs a set of tools that hides the attacker's activity and keeps covert root access to the host. What type of malware is this?",
+      "choices": [
+        "Rootkit",
+        "Adware",
+        "Worm",
+        "Keylogger",
+        "Ransomware"
+      ],
+      "answer_index": 0,
+      "explanation": "NIST defines a rootkit as tools an attacker uses after gaining root-level access to conceal activity and keep root access through covert means. A worm is defined by self-propagation across systems, not by concealment after compromise.",
+      "sources": [
+        {
+          "title": "rootkit - Glossary | NIST CSRC",
+          "url": "https://csrc.nist.gov/glossary/term/rootkit"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2210",
+      "domain": "220-1202 2.0 Security",
+      "question": "A Windows user tries to make a change that needs administrator-level permission, and a prompt appears asking them to approve or deny it. Which Windows feature produces this prompt?",
+      "choices": [
+        "Windows Defender Firewall",
+        "BitLocker",
+        "User Account Control (UAC)",
+        "Credential Manager",
+        "Windows Hello"
+      ],
+      "answer_index": 2,
+      "explanation": "Microsoft describes User Account Control as notifying the user when a change requires administrator-level permission and offering the chance to approve or deny it. Windows Defender Firewall filters network traffic and does not gate administrative changes.",
+      "sources": [
+        {
+          "title": "User Account Control | Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2211",
+      "domain": "220-1202 2.0 Security",
+      "question": "A user downloads a free utility that works as advertised but also contains hidden code that performs malicious actions when the program runs. Which malware type best matches this description?",
+      "choices": [
+        "Worm",
+        "Spyware",
+        "Ransomware",
+        "Botnet",
+        "Trojan horse"
+      ],
+      "answer_index": 4,
+      "explanation": "NIST defines a Trojan horse as a program that appears to have a useful function but also has a hidden, potentially malicious function. A worm spreads by itself and does not depend on posing as a useful program.",
+      "sources": [
+        {
+          "title": "Trojan horse - Glossary | NIST CSRC",
+          "url": "https://csrc.nist.gov/glossary/term/trojan_horse"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2307",
+      "domain": "220-1202 3.0 Software Troubleshooting",
+      "question": "A printer stopped working right after its driver was updated. In Device Manager, after opening the printer's Properties, where do you go to restore the previously installed driver?",
+      "choices": [
+        "General tab, then Troubleshoot",
+        "Driver tab, then Roll Back Driver",
+        "Details tab, then Hardware Ids",
+        "Events tab, then View All Events",
+        "Power Management tab, then clear the power-saving check box"
+      ],
+      "answer_index": 1,
+      "explanation": "Microsoft's steps are to open the device's Properties, select the Driver tab, and choose Roll Back Driver, which requires administrator permissions. The Details tab only displays device properties and cannot change the installed driver.",
+      "sources": [
+        {
+          "title": "Update drivers through Device Manager in Windows - Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/update-drivers-through-device-manager-in-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2308",
+      "domain": "220-1202 3.0 Software Troubleshooting",
+      "question": "A technician performs a clean boot in System Configuration (msconfig) to find a third-party program that conflicts with an app. What should be done on the Services tab?",
+      "choices": [
+        "Select Enable all, then Apply",
+        "Select Disable all without hiding any services",
+        "Delete every service in the list",
+        "Select Hide all Microsoft services, then Disable all",
+        "Leave the Services tab alone and check Safe boot on the Boot tab"
+      ],
+      "answer_index": 3,
+      "explanation": "Microsoft's clean boot procedure hides all Microsoft services first and then disables the rest, so Windows starts with only essential drivers and startup programs. Disabling all services without hiding Microsoft ones would also turn off core Windows services.",
+      "sources": [
+        {
+          "title": "How to perform a clean boot in Windows - Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/experience/startup-boot/how-to-perform-a-clean-boot-in-windows"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2406",
+      "domain": "220-1202 4.0 Operational Procedures",
+      "question": "Per EPA guidance, how should a technician dispose of used lithium-ion batteries removed from old laptops?",
+      "choices": [
+        "Take them to a battery recycling or household hazardous waste collection site, with terminals taped",
+        "Put them in the regular household or office trash",
+        "Place them loose in the curbside recycling bin",
+        "Puncture them first so they fully discharge",
+        "Store them loose together in a metal container until it is full"
+      ],
+      "answer_index": 0,
+      "explanation": "The EPA says lithium-ion batteries should not go in household garbage or recycling bins and should go to separate recycling or household hazardous waste collection points, with terminals taped to prevent fires. Curbside bins are wrong because batteries can be crushed during sorting and start fires.",
+      "sources": [
+        {
+          "title": "Used Lithium-Ion Batteries | US EPA",
+          "url": "https://www.epa.gov/recycle/used-lithium-ion-batteries"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2407",
+      "domain": "220-1202 4.0 Operational Procedures",
+      "question": "Which statement matches NIST's definition of personally identifiable information (PII)?",
+      "choices": [
+        "Only medical records held by a healthcare provider",
+        "Only government data marked as classified",
+        "Information that can be used to distinguish or trace an individual's identity, alone or combined with other information",
+        "Any file stored on a company-owned server",
+        "Only credit card and bank account numbers"
+      ],
+      "answer_index": 2,
+      "explanation": "NIST, citing OMB Circular A-130, defines PII as information that can distinguish or trace an individual's identity either alone or when combined with other information. Medical records are one kind of sensitive data (PHI) but PII is much broader than that.",
+      "sources": [
+        {
+          "title": "personally identifiable information (PII) - Glossary | NIST CSRC",
+          "url": "https://csrc.nist.gov/glossary/term/personally_identifiable_information"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
     }
   ],
   "version": "2026-10-28"
