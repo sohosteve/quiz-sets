@@ -1,0 +1,753 @@
+{
+  "slug": "comptia-a-plus",
+  "subject": "CompTIA A+ (220-1201 / 220-1202)",
+  "questions": [
+    {
+      "id": "aplus-1101",
+      "domain": "220-1201 1.0 Mobile Devices",
+      "question": "A user asks what an eSIM on their iPhone actually is. Which description is correct?",
+      "choices": [
+        "A removable adapter that lets a nano-SIM fit in a larger tray",
+        "An encrypted cloud backup of the contacts stored on the SIM card",
+        "A standard digital SIM built into the phone, so no physical SIM card is needed",
+        "A feature that routes voice calls over Wi-Fi instead of the cellular network",
+        "A carrier unlock code that lets the phone accept any carrier's SIM"
+      ],
+      "answer_index": 2,
+      "explanation": "Apple describes an eSIM as an industry-standard digital SIM built into the iPhone that removes the need for a physical SIM card, and plans can be activated digitally. It is not a physical adapter, a backup, Wi-Fi Calling, or an unlock code.",
+      "sources": [
+        {
+          "title": "Apple Support: Set up eSIM on iPhone",
+          "url": "https://support.apple.com/en-us/118669"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1102",
+      "domain": "220-1201 1.0 Mobile Devices",
+      "question": "A technician needs to give a laptop internet access by sharing an iPhone's cellular data connection over Wi-Fi, USB, or Bluetooth. Which iPhone feature does this?",
+      "choices": [
+        "Personal Hotspot",
+        "AirDrop",
+        "Handoff",
+        "Wi-Fi Calling",
+        "Universal Clipboard"
+      ],
+      "answer_index": 0,
+      "explanation": "Personal Hotspot shares the iPhone's or iPad's cellular data connection with other devices, which can join over Wi-Fi, USB, or Bluetooth. AirDrop transfers files between nearby devices; it does not share an internet connection.",
+      "sources": [
+        {
+          "title": "Apple Support: Connect to the Personal Hotspot of an iPhone or iPad",
+          "url": "https://support.apple.com/en-us/111785"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1201",
+      "domain": "220-1201 2.0 Networking",
+      "question": "In DHCP for IPv4, a client sends its messages to which UDP port on the server?",
+      "choices": [
+        "68",
+        "53",
+        "69",
+        "67",
+        "123"
+      ],
+      "answer_index": 3,
+      "explanation": "RFC 2131 sends client-to-server DHCP messages to the DHCP server port, 67, and server-to-client messages to the DHCP client port, 68. Port 68 is the client side, so it is the most common wrong pick.",
+      "sources": [
+        {
+          "title": "RFC 2131: Dynamic Host Configuration Protocol",
+          "url": "https://www.rfc-editor.org/rfc/rfc2131"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1202",
+      "domain": "220-1201 2.0 Networking",
+      "question": "By default, an SSH server listens for connections on which TCP port?",
+      "choices": [
+        "23",
+        "22",
+        "21",
+        "25",
+        "443"
+      ],
+      "answer_index": 1,
+      "explanation": "RFC 4253 states that an SSH server normally listens on port 22, which IANA registered for SSH. Port 23 is Telnet, the unencrypted remote-terminal protocol SSH replaces.",
+      "sources": [
+        {
+          "title": "RFC 4253: The Secure Shell (SSH) Transport Layer Protocol",
+          "url": "https://www.rfc-editor.org/rfc/rfc4253"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1203",
+      "domain": "220-1201 2.0 Networking",
+      "question": "A firewall rule must allow Remote Desktop Protocol (RDP) connections to a Windows PC that uses the default settings. Which port does RDP listen on by default?",
+      "choices": [
+        "3306",
+        "5900",
+        "445",
+        "1433",
+        "3389"
+      ],
+      "answer_index": 4,
+      "explanation": "Microsoft documents that Remote Desktop listens on port 3389 by default; the value is stored in the RDP-Tcp PortNumber registry entry. Port 5900 is the usual VNC port, a different remote-control protocol.",
+      "sources": [
+        {
+          "title": "Microsoft Learn: Change Remote Desktop listening port on Windows and Windows Server",
+          "url": "https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/change-listening-port"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1204",
+      "domain": "220-1201 2.0 Networking",
+      "question": "Which DNS resource record type stores a single IPv6 address for a host name?",
+      "choices": [
+        "A",
+        "MX",
+        "AAAA",
+        "PTR",
+        "CNAME"
+      ],
+      "answer_index": 2,
+      "explanation": "RFC 3596 defines the AAAA record as an Internet-class record that stores a single IPv6 address (type value 28). The A record holds an IPv4 address, not IPv6.",
+      "sources": [
+        {
+          "title": "RFC 3596: DNS Extensions to Support IP Version 6",
+          "url": "https://www.rfc-editor.org/rfc/rfc3596"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1401",
+      "domain": "220-1201 4.0 Virtualization and Cloud Computing",
+      "question": "Which of these is an example of a Type 2 (hosted) hypervisor, one that runs as an application on top of a host operating system?",
+      "choices": [
+        "Oracle VM VirtualBox",
+        "VMware ESXi",
+        "Microsoft Hyper-V",
+        "Xen",
+        "Linux KVM"
+      ],
+      "answer_index": 0,
+      "explanation": "IBM lists Oracle VM VirtualBox as a Type 2 hypervisor that runs inside a host OS on Linux, macOS, and Windows. ESXi, Hyper-V, Xen, and KVM are all listed as Type 1 (bare-metal) hypervisors that run directly on the hardware.",
+      "sources": [
+        {
+          "title": "IBM Think: What are hypervisors?",
+          "url": "https://www.ibm.com/think/topics/hypervisors"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1402",
+      "domain": "220-1201 4.0 Virtualization and Cloud Computing",
+      "question": "Under the NIST SP 800-145 definition of cloud computing, which essential characteristic describes capabilities scaling outward and inward to match demand, often appearing unlimited to the consumer?",
+      "choices": [
+        "Measured service",
+        "Resource pooling",
+        "Broad network access",
+        "Rapid elasticity",
+        "On-demand self-service"
+      ],
+      "answer_index": 3,
+      "explanation": "NIST defines rapid elasticity as capabilities that can be elastically provisioned and released to scale outward and inward with demand. Measured service is about metering and reporting resource use, not scaling.",
+      "sources": [
+        {
+          "title": "NIST SP 800-145: The NIST Definition of Cloud Computing (CSRC)",
+          "url": "https://csrc.nist.gov/pubs/sp/800/145/final"
+        },
+        {
+          "title": "NIST SP 800-145 (PDF)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1301",
+      "domain": "220-1201 3.0 Hardware",
+      "question": "Which RAID level stripes data across the member drives, rotates parity blocks among all of them, and needs at least three drives?",
+      "choices": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 10",
+        "JBOD (spanning)"
+      ],
+      "answer_index": 2,
+      "explanation": "RAID 5 uses striping with distributed parity, requires a minimum of three drives, and survives the loss of exactly one drive. RAID 1 is a mirror and RAID 0 is striping with no parity or redundancy.",
+      "sources": [
+        {
+          "title": "What is RAID 5? Guide to Parity, Speed & Setup (Western Digital)",
+          "url": "https://www.westerndigital.com/solutions/raid/what-is-raid-5"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1302",
+      "domain": "220-1201 3.0 Hardware",
+      "question": "How does a USB 3.2 Gen 2x2 host and device reach its rated data rate?",
+      "choices": [
+        "Two lanes of 10Gbps each, for 20Gbps total",
+        "One lane at 10Gbps",
+        "One lane at 5Gbps",
+        "One lane clocked at 20Gbps",
+        "Two lanes of 20Gbps each, for 40Gbps total"
+      ],
+      "answer_index": 0,
+      "explanation": "The USB 3.2 specification defines multi-lane operation, combining two 10Gbps lanes to reach 20Gbps for Gen 2x2. A single 10Gbps lane is USB 3.2 Gen 2, and a single 5Gbps lane is USB 3.2 Gen 1.",
+      "sources": [
+        {
+          "title": "USB 3.2 Specification Language Usage Guidelines from USB-IF",
+          "url": "https://www.usb.org/sites/default/files/usb_3_2_language_product_and_packaging_guidelines_final.pdf"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1303",
+      "domain": "220-1201 3.0 Hardware",
+      "question": "A user asks why an NVMe SSD benchmarks much faster than a SATA SSD. Which explanation is correct?",
+      "choices": [
+        "NVMe drives run on the SATA III bus at a higher 12Gb/s link rate",
+        "NVMe drives use AHCI with a single queue of 32 commands, which SATA cannot use",
+        "SATA SSDs are slowed because they must manage 65,535 queues per drive",
+        "NVMe drives connect over the USB bus, which has more bandwidth than SATA",
+        "NVMe uses the PCIe bus and supports many deep command queues, while SATA with AHCI has one queue of up to 32 commands"
+      ],
+      "answer_index": 4,
+      "explanation": "NVMe runs over PCIe and supports up to 65,535 I/O queues, while AHCI on SATA offers a single queue of up to 32 commands on a bus capped at 6Gb/s. The single 32-command queue belongs to AHCI/SATA, not NVMe.",
+      "sources": [
+        {
+          "title": "NVMe vs SATA: What is the difference? (Kingston)",
+          "url": "https://www.kingston.com/en/blog/pc-performance/nvme-vs-sata"
+        },
+        {
+          "title": "What makes NVMe architecture so efficient? (NVM Express)",
+          "url": "https://nvmexpress.org/faq-items/what-makes-nvme-architecture-so-efficient/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1304",
+      "domain": "220-1201 3.0 Hardware",
+      "question": "Which statement about DDR5 memory modules is accurate?",
+      "choices": [
+        "They fit DDR4 slots because the key notch is in the same position",
+        "Each module is split into two independent 32-bit subchannels",
+        "The module has no power circuitry; all voltage regulation stays on the motherboard",
+        "Each module presents a 128-bit total data width",
+        "Each module is split into four independent 16-bit subchannels"
+      ],
+      "answer_index": 1,
+      "explanation": "DDR5 divides each module into two independent 32-bit subchannels (64 bits total) and adds an on-module PMIC for power regulation. The notch was moved so DDR5 cannot be inserted into DDR4 slots.",
+      "sources": [
+        {
+          "title": "DDR5 Overview (Kingston)",
+          "url": "https://www.kingston.com/en/blog/pc-performance/ddr5-overview"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1501",
+      "domain": "220-1201 5.0 Hardware and Network Troubleshooting",
+      "question": "A Windows PC set to obtain an address automatically shows 169.254.37.12 and can reach only a few local machines, not the internet. What is the most likely cause?",
+      "choices": [
+        "The DHCP server handed out an address from its 169.254 scope",
+        "DHCP succeeded but the DNS server is unreachable",
+        "Someone manually configured a public static address on the adapter",
+        "No DHCP server answered, so Windows assigned itself an APIPA address",
+        "The PC is on an IPv6-only network and translated its IPv6 address"
+      ],
+      "answer_index": 3,
+      "explanation": "When a DHCP client gets no answer from a DHCP server, Windows uses APIPA to assign itself an address from 169.254.0.0/16, which can only reach other link-local hosts on the same subnet. RFC 3927 says these addresses should not be handed out by a DHCP server.",
+      "sources": [
+        {
+          "title": "How to use automatic TCP/IP addressing without a DHCP server (Microsoft Learn)",
+          "url": "https://learn.microsoft.com/en-us/windows-server/troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh"
+        },
+        {
+          "title": "RFC 3927: Dynamic Configuration of IPv4 Link-Local Addresses",
+          "url": "https://datatracker.ietf.org/doc/html/rfc3927"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1502",
+      "domain": "220-1201 5.0 Hardware and Network Troubleshooting",
+      "question": "A Dell OptiPlex 3080 will not boot and its power light flashes 2 amber, then 3 white. According to Dell's diagnostic light table, what does this indicate?",
+      "choices": [
+        "CPU failure",
+        "No memory/RAM detected",
+        "CMOS battery failure",
+        "Power rail failure",
+        "PCI or video card/chip failure"
+      ],
+      "answer_index": 1,
+      "explanation": "Dell's table maps 2 amber, 3 white to no memory or RAM detected, so reseating or replacing the memory is the next step. CPU failure is 2 amber, 1 white, and CMOS battery failure is 3 amber, 1 white.",
+      "sources": [
+        {
+          "title": "OptiPlex 3080 Micro Service Manual: System diagnostic lights (Dell)",
+          "url": "https://www.dell.com/support/manuals/en-us/optiplex-3080-micro/optiplex3080_micro_sm/system-diagnostic-lights?guid=guid-07853ede-4844-43b1-8f55-6d1a070dd898&lang=en-us"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1503",
+      "domain": "220-1201 5.0 Hardware and Network Troubleshooting",
+      "question": "Before Windows loads, a laptop displays \"SMART Failure Predicted on Hard Disk 0.\" What does this warning mean and what should the technician do first?",
+      "choices": [
+        "The CMOS battery is low; replace it and reset the BIOS clock",
+        "The boot order is wrong; move the drive to the top of the boot list",
+        "The OS is corrupted; reinstall Windows to clear the warning",
+        "The drive's firmware is outdated; disable S.M.A.R.T. in the BIOS and continue",
+        "The drive's self-monitoring predicts a failure; back up data immediately, confirm with diagnostics, and plan to replace the drive"
+      ],
+      "answer_index": 4,
+      "explanation": "S.M.A.R.T. is the drive's built-in diagnostic that reports pending failures, and Dell's warning text tells users to back up their data immediately and replace the drive. Reinstalling the OS or disabling the alert does nothing about the failing hardware.",
+      "sources": [
+        {
+          "title": "Error Codes on Dell Commercial and Consumer Products (Dell)",
+          "url": "https://www.dell.com/support/kbdoc/en-us/000124354/error-codes-on-dell-commercial-and-consumer-products"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-1504",
+      "domain": "220-1201 5.0 Hardware and Network Troubleshooting",
+      "question": "Users on a 2.4 GHz Wi-Fi network report drops caused by neighboring networks. Which channels should you choose from to avoid overlapping channel interference?",
+      "choices": [
+        "1, 6, or 11",
+        "1, 5, or 9",
+        "2, 7, or 12",
+        "3, 6, or 9",
+        "1, 2, or 3"
+      ],
+      "answer_index": 0,
+      "explanation": "Intel advises always using channel 1, 6, or 11 on 2.4 GHz because each 2.4 GHz channel overlaps its neighbors and these three do not overlap one another. Picking any other channel invites interference from more than one primary channel.",
+      "sources": [
+        {
+          "title": "Guide to Configure Wi-Fi Channels and Channel Widths to Improve Network Connection (Intel)",
+          "url": "https://www.intel.com/content/www/us/en/support/articles/000058989.html"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2101",
+      "domain": "220-1202 1.0 Operating Systems",
+      "question": "A technician suspects that protected Windows system files have been overwritten with bad versions. Which command scans every protected system file and repairs problems when it can?",
+      "choices": [
+        "sfc /verifyonly",
+        "chkdsk /x",
+        "sfc /scannow",
+        "gpupdate /force",
+        "robocopy /purge"
+      ],
+      "answer_index": 2,
+      "explanation": "sfc /scannow checks the integrity of all protected system files and repairs damaged ones when possible. sfc /verifyonly runs the same scan but makes no repairs, and chkdsk works on file system structures, not protected system file versions.",
+      "sources": [
+        {
+          "title": "sfc | Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2102",
+      "domain": "220-1202 1.0 Operating Systems",
+      "question": "Which robocopy option mirrors a directory tree, copying subdirectories (including empty ones) and deleting destination files that no longer exist in the source?",
+      "choices": [
+        "/mir",
+        "/s",
+        "/mov",
+        "/z",
+        "/xo"
+      ],
+      "answer_index": 0,
+      "explanation": "/mir is equivalent to /e plus /purge, so it copies the whole tree and removes extra files from the destination. /s copies subdirectories but skips empty ones and never deletes anything at the destination.",
+      "sources": [
+        {
+          "title": "Robocopy | Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2103",
+      "domain": "220-1202 1.0 Operating Systems",
+      "question": "By default, gpupdate applies only Group Policy settings that have changed. Which switch makes it reapply all policy settings?",
+      "choices": [
+        "/target:computer",
+        "/logoff",
+        "/sync",
+        "/force",
+        "/boot"
+      ],
+      "answer_index": 3,
+      "explanation": "gpupdate /force reapplies every policy setting instead of only changed ones. /target:computer limits the update to computer settings, and /boot restarts the PC after applying policy; neither forces a full reapply.",
+      "sources": [
+        {
+          "title": "gpupdate | Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/gpupdate"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2104",
+      "domain": "220-1202 1.0 Operating Systems",
+      "question": "Which chkdsk parameter locates bad sectors and recovers readable information, while also including the error-fixing behavior of /f?",
+      "choices": [
+        "/v",
+        "/i",
+        "/c",
+        "/scan",
+        "/r"
+      ],
+      "answer_index": 4,
+      "explanation": "chkdsk /r finds bad sectors, recovers readable data, and includes everything /f does. /i and /c only speed up an NTFS check by skipping some checks, and /v just lists file names as they are checked.",
+      "sources": [
+        {
+          "title": "chkdsk | Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/chkdsk"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2105",
+      "domain": "220-1202 1.0 Operating Systems",
+      "question": "On a Mac, which built-in feature adds protection to the startup disk by requiring the login password before anyone can access the encrypted data?",
+      "choices": [
+        "Time Machine",
+        "FileVault",
+        "Gatekeeper",
+        "Keychain Access",
+        "Spotlight"
+      ],
+      "answer_index": 1,
+      "explanation": "FileVault protects data on the startup disk by keeping someone from decrypting or accessing it without the login password. Time Machine is the macOS backup tool and does not control who can decrypt the disk.",
+      "sources": [
+        {
+          "title": "Protect data on your Mac with FileVault - Apple Support",
+          "url": "https://support.apple.com/guide/mac-help/protect-data-on-your-mac-with-filevault-mh11785/mac"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2201",
+      "domain": "220-1202 2.0 Security",
+      "question": "WPA3-Personal gives users stronger protection against password guessing than WPA2-Personal. Which authentication method does WPA3 use in place of the pre-shared key (PSK) exchange?",
+      "choices": [
+        "TKIP",
+        "WEP shared key",
+        "Simultaneous Authentication of Equals (SAE)",
+        "Wi-Fi Protected Setup (WPS)",
+        "RADIUS with 802.1X"
+      ],
+      "answer_index": 2,
+      "explanation": "WPA3 replaces the PSK exchange with Simultaneous Authentication of Equals (SAE), which is what improves resistance to password guessing in WPA3-Personal. RADIUS with 802.1X is the enterprise authentication model, not the personal-mode password exchange.",
+      "sources": [
+        {
+          "title": "Security | Wi-Fi Alliance",
+          "url": "https://www.wi-fi.org/discover-wi-fi/security"
+        },
+        {
+          "title": "Cisco Catalyst 9800 Configuration Model: WLANs",
+          "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/config-guide/newconfigmodel/b_catalyst-9800-configuration-model/m_wlans.html"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2202",
+      "domain": "220-1202 2.0 Security",
+      "question": "A user signs in with a password and then a code from a hardware token. Under the NIST definition of multifactor authentication, which factor category does the hardware token represent?",
+      "choices": [
+        "Something you have",
+        "Something you know",
+        "Something you are",
+        "Somewhere you are",
+        "Something you do"
+      ],
+      "answer_index": 0,
+      "explanation": "NIST lists a cryptographic identification device or token as an example of something you have. The password is the something-you-know factor, and biometrics are something you are.",
+      "sources": [
+        {
+          "title": "multi-factor authentication - NIST CSRC Glossary",
+          "url": "https://csrc.nist.gov/glossary/term/multi_factor_authentication"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2203",
+      "domain": "220-1202 2.0 Security",
+      "question": "Under NIST SP 800-88, which sanitization method uses logical techniques, such as overwriting through standard read and write commands, to protect against simple, non-invasive data recovery?",
+      "choices": [
+        "Purge",
+        "Destroy",
+        "Quarantine",
+        "Clear",
+        "Retain"
+      ],
+      "answer_index": 3,
+      "explanation": "Clear applies logical techniques like rewriting through the normal device interface and guards only against simple, non-invasive recovery. Purge goes further, making recovery infeasible even with state-of-the-art laboratory techniques.",
+      "sources": [
+        {
+          "title": "clear - NIST CSRC Glossary",
+          "url": "https://csrc.nist.gov/glossary/term/clear"
+        },
+        {
+          "title": "purge - NIST CSRC Glossary",
+          "url": "https://csrc.nist.gov/glossary/term/purge"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2204",
+      "domain": "220-1202 2.0 Security",
+      "question": "Which type of malware is designed to encrypt files on a device, making those files and the systems that depend on them unusable?",
+      "choices": [
+        "Keylogger",
+        "Adware",
+        "Rootkit",
+        "Spyware",
+        "Ransomware"
+      ],
+      "answer_index": 4,
+      "explanation": "CISA defines ransomware as malware built to encrypt files so they and dependent systems become unusable. A rootkit hides an attacker's presence and a keylogger records keystrokes; neither is defined by encrypting victim files.",
+      "sources": [
+        {
+          "title": "Ransomware 101 | CISA",
+          "url": "https://www.cisa.gov/stopransomware/ransomware-101"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2205",
+      "domain": "220-1202 2.0 Security",
+      "question": "Which Windows feature provides cryptographic protection of individual files on NTFS volumes using a public-key system?",
+      "choices": [
+        "BitLocker Drive Encryption",
+        "Encrypting File System (EFS)",
+        "NTFS share permissions",
+        "Windows Defender Firewall",
+        "User Account Control"
+      ],
+      "answer_index": 1,
+      "explanation": "EFS encrypts individual files and directories on NTFS volumes using public-key cryptography. BitLocker encrypts whole volumes rather than selected files, and share permissions control access without encrypting anything.",
+      "sources": [
+        {
+          "title": "File Encryption - Win32 apps | Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/file-encryption"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2301",
+      "domain": "220-1202 3.0 Software Troubleshooting",
+      "question": "A recent driver install made a Windows PC unstable. The technician uses System Restore to roll back to a restore point. What does System Restore revert?",
+      "choices": [
+        "Personal files in the user's Documents folder",
+        "The entire drive, including all user data",
+        "System files, registry settings, and installed programs",
+        "Only the BIOS/UEFI firmware settings",
+        "Only the user's browser history and cookies"
+      ],
+      "answer_index": 2,
+      "explanation": "System Restore returns system files, registry settings, and installed programs to the state at the restore point without affecting personal files. Restoring the entire drive is what a full system image recovery does, not System Restore.",
+      "sources": [
+        {
+          "title": "System Restore - Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2302",
+      "domain": "220-1202 3.0 Software Troubleshooting",
+      "question": "A technician needs to start Windows with a limited set of files and drivers but still download an updated driver from the internet. Which startup option should they choose?",
+      "choices": [
+        "Safe Mode",
+        "Safe Mode with Networking",
+        "Disable driver signature enforcement",
+        "Enable boot logging",
+        "Enable low-resolution video"
+      ],
+      "answer_index": 1,
+      "explanation": "Safe Mode with Networking starts Windows in the basic Safe Mode state but adds the network drivers and services needed to reach the internet. Plain Safe Mode loads only a limited set of files and drivers, without networking.",
+      "sources": [
+        {
+          "title": "Start your PC in safe mode in Windows - Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2303",
+      "domain": "220-1202 3.0 Software Troubleshooting",
+      "question": "Which condition causes the Windows Recovery Environment (WinRE) to start automatically?",
+      "choices": [
+        "A single failed Windows Update installation",
+        "A full system drive warning",
+        "An expired Windows license",
+        "Two consecutive failed attempts to start Windows",
+        "A user entering the wrong password three times"
+      ],
+      "answer_index": 3,
+      "explanation": "Microsoft lists two consecutive failed attempts to start Windows as one of the triggers that launch WinRE automatically. A single failed update or a wrong password is not on that list.",
+      "sources": [
+        {
+          "title": "Windows Recovery Environment (Windows RE) | Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2304",
+      "domain": "220-1202 3.0 Software Troubleshooting",
+      "question": "chkdsk ran at the last restart and the technician wants to read its results. In Event Viewer, which Windows log should they filter for the Chkdsk and Wininit event sources?",
+      "choices": [
+        "Application",
+        "Security",
+        "Setup",
+        "Forwarded Events",
+        "Hardware Events"
+      ],
+      "answer_index": 0,
+      "explanation": "Microsoft's instructions say to open Windows Logs, select Application, and filter for the Chkdsk and Wininit sources. The Security log holds audit events such as sign-ins, not chkdsk results.",
+      "sources": [
+        {
+          "title": "chkdsk | Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/chkdsk"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2401",
+      "domain": "220-1202 4.0 Operational Procedures",
+      "question": "In the 3-2-1 backup rule, what does the \"1\" stand for?",
+      "choices": [
+        "Run one full backup per week",
+        "Keep one primary copy and no backups",
+        "Use one backup software vendor",
+        "Test one restore per month",
+        "Store one copy offsite"
+      ],
+      "answer_index": 4,
+      "explanation": "The rule is 3 copies of important files, on 2 different media types, with 1 copy stored offsite. The 3 copies are one primary plus two backups, so keeping a single primary with no backups is the opposite of the rule.",
+      "sources": [
+        {
+          "title": "Data Backup Options - CISA (US-CERT)",
+          "url": "https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2402",
+      "domain": "220-1202 4.0 Operational Procedures",
+      "question": "A technician saves a set of PowerShell commands as a script. Which file extension should the script use?",
+      "choices": [
+        ".sh",
+        ".bat",
+        ".ps1",
+        ".vbs",
+        ".py"
+      ],
+      "answer_index": 2,
+      "explanation": "PowerShell scripts are plain text files with a .ps1 extension. A .bat file is a Command Prompt batch file and .sh is a Unix shell script, so neither runs as a PowerShell script by default.",
+      "sources": [
+        {
+          "title": "about_Scripts - PowerShell | Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_scripts"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "aplus-2403",
+      "domain": "220-1202 4.0 Operational Procedures",
+      "question": "Which PowerShell execution policy lets locally written scripts run unsigned but requires a trusted digital signature on scripts downloaded from the internet?",
+      "choices": [
+        "AllSigned",
+        "RemoteSigned",
+        "Restricted",
+        "Bypass",
+        "Unrestricted"
+      ],
+      "answer_index": 1,
+      "explanation": "RemoteSigned requires a trusted signature only on scripts downloaded from the internet and lets local scripts run unsigned. AllSigned is stricter and requires signatures on every script, including ones written locally.",
+      "sources": [
+        {
+          "title": "about_Execution_Policies - PowerShell | Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    }
+  ],
+  "version": "2026-10-28"
+}

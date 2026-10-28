@@ -9,6 +9,13 @@
       "count": 33
     },
     {
+      "slug": "comptia-a-plus",
+      "subject": "CompTIA A+ (220-1201 / 220-1202)",
+      "version": "2026-10-28",
+      "path": "sets/comptia-a-plus.json",
+      "count": 33
+    },
+    {
       "slug": "comptia-security-plus-sy0-701",
       "subject": "CompTIA Security+ (SY0-701)",
       "version": "2026-10-28",
