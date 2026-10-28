@@ -2,6 +2,13 @@
   "generated_at": "2026-10-28",
   "sets": [
     {
+      "slug": "3cx-basic-fundamentals",
+      "subject": "3CX Basic Fundamentals",
+      "version": "2026-10-28",
+      "path": "sets/3cx-basic-fundamentals.json",
+      "count": 33
+    },
+    {
       "slug": "comptia-security-plus-sy0-701",
       "subject": "CompTIA Security+ (SY0-701)",
       "version": "2026-10-28",

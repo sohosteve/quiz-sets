@@ -1,0 +1,749 @@
+{
+  "slug": "3cx-basic-fundamentals",
+  "subject": "3CX Basic Fundamentals",
+  "questions": [
+    {
+      "id": "3cxb-1001",
+      "domain": "Ch1 Deployment and Hosting",
+      "question": "A company with fewer than 10 users wants 3CX without handling licensing, hosting or instance management. Which option does the 3CX install guide recommend?",
+      "choices": [
+        "A dedicated Hosted by 3CX instance with a purchased license",
+        "A self-hosted private cloud instance on DigitalOcean",
+        "3CX SMB, a free shared instance for up to 10 users",
+        "An on-premise Linux install virtualized on Hyper-V",
+        "An on-premise Windows install with a failover server"
+      ],
+      "answer_index": 2,
+      "explanation": "The install guide recommends 3CX SMB for companies under 10 users: it is free, runs on a shared instance and needs no licensing or instance management. A dedicated instance (hosted, private cloud or on-premise) is for more than 10 users and requires a license.",
+      "sources": [
+        {
+          "title": "3CX Manual: Installing 3CX",
+          "url": "https://www.3cx.com/docs/manual/install/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-1002",
+      "domain": "Ch1 Deployment and Hosting",
+      "question": "During 3CX signup and deployment, which setting does the install guide warn cannot be altered later?",
+      "choices": [
+        "The Admin Console password",
+        "The SIP trunk provider",
+        "The DID numbers assigned to users",
+        "The IP addresses allowed by Console Restrictions",
+        "The number of digits used for extension numbers"
+      ],
+      "answer_index": 4,
+      "explanation": "The extension length you set during signup cannot be altered later, so it must be chosen carefully. The Admin Console password is something the guide actually tells you to change after first sign-in.",
+      "sources": [
+        {
+          "title": "3CX Manual: Installing 3CX",
+          "url": "https://www.3cx.com/docs/manual/install/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-1003",
+      "domain": "Ch1 Deployment and Hosting",
+      "question": "Which of these is listed as a requirement for running 3CX on-premise?",
+      "choices": [
+        "SSH access to the server granted to 3CX support",
+        "A manageable DNS server with split DNS so the 3CX FQDN resolves to the host's LAN IP internally and the public IP externally",
+        "An account with Google Cloud, Amazon or Azure",
+        "A dynamic public IP that 3CX re-checks at regular intervals",
+        "A PSTN gateway for inbound and outbound calls"
+      ],
+      "answer_index": 1,
+      "explanation": "On-premise installs need a manageable DNS server with split DNS, a static IP and a properly configured firewall. A dynamic IP is the opposite of what is required: the docs note the PBX stops working while a changed IP is updated and always recommend a static IP.",
+      "sources": [
+        {
+          "title": "3CX Manual: Installing 3CX",
+          "url": "https://www.3cx.com/docs/manual/install/"
+        },
+        {
+          "title": "3CX Manual: Advanced System Features",
+          "url": "https://www.3cx.com/docs/manual/advanced-features/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-1004",
+      "domain": "Ch1 Deployment and Hosting",
+      "question": "With Hosted by 3CX, which task remains the customer's responsibility?",
+      "choices": [
+        "Applying operating system security patches",
+        "Upgrading 3CX to new versions",
+        "Monitoring the system 24/7 for security issues",
+        "Configuring and maintaining a backup strategy, such as remote storage for backups and call data",
+        "Configuring firewall rules when the instance is deployed"
+      ],
+      "answer_index": 3,
+      "explanation": "3CX handles deployment, firewall rules, OS and 3CX patching, upgrades and 24/7 monitoring, but it does not take backups of your system. The administrator must set up their own backup strategy, and 3CX recommends remote storage.",
+      "sources": [
+        {
+          "title": "Hosted with 3CX - Explained",
+          "url": "https://www.3cx.com/ordering/pricing/hosted-info/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-1005",
+      "domain": "Ch1 Deployment and Hosting",
+      "question": "An on-premise 3CX system uses PSTN lines through a PSTN gateway. What must be done before switching it to 3CX Hosted?",
+      "choices": [
+        "Move to a SIP trunk, ideally one from a 3CX supported provider, and test it on the current system",
+        "Enable SSH access so 3CX can migrate the gateway configuration",
+        "Turn on failover mode so the gateway stays available during the switch",
+        "Change the recordings and backup paths to a network share",
+        "Connect the gateway to the hosted instance using STUN"
+      ],
+      "answer_index": 0,
+      "explanation": "3CX Hosted requires a SIP trunk and does not support PSTN, FXO or ISDN gateways, so you must move to a SIP trunk first. SSH access and failover mode are both listed as unavailable on hosted instances.",
+      "sources": [
+        {
+          "title": "How to Migrate to 3CX Hosted",
+          "url": "https://www.3cx.com/docs/switch-hosted-pbx/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-2001",
+      "domain": "Ch2 Setup your Team",
+      "question": "Which user role is the highest level in 3CX, allowing any action including elevating rights for other users?",
+      "choices": [
+        "Manager",
+        "System Owner",
+        "Receptionist",
+        "User",
+        "Group Owner"
+      ],
+      "answer_index": 1,
+      "explanation": "System Owner is the highest-level role and allows any action, including elevating other users' rights. User is the lowest-level role, limited to settings for the user's own calls and data.",
+      "sources": [
+        {
+          "title": "3CX Manual: Creating Users / Extensions",
+          "url": "https://www.3cx.com/docs/manual/create-extensions/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-2002",
+      "domain": "Ch2 Setup your Team",
+      "question": "What does a user's Main Department Membership dictate in 3CX?",
+      "choices": [
+        "The number of digits in the user's extension",
+        "The codec priority used by the user's 3CX apps",
+        "The authenticator app required for 2FA",
+        "The user's office hours, time zone and language, unless overridden for that user",
+        "The SIP trunk provider used for the user's outbound calls"
+      ],
+      "answer_index": 3,
+      "explanation": "The main department sets the user's office hours, time zone and language, and office hours and language can be overridden per user. Extension length is fixed system-wide at signup, not per department.",
+      "sources": [
+        {
+          "title": "3CX Manual: Creating Users / Extensions",
+          "url": "https://www.3cx.com/docs/manual/create-extensions/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-2003",
+      "domain": "Ch2 Setup your Team",
+      "question": "In 3CX, what do Call Forwarding rules base their routing decisions on?",
+      "choices": [
+        "The extension's status",
+        "The SIP trunk the call arrived on",
+        "The caller's country code",
+        "The codec negotiated for the call",
+        "The model of the user's IP phone"
+      ],
+      "answer_index": 0,
+      "explanation": "Call Forwarding rules route calls according to the extension's status, and users can set them in the Web Client under Settings, Call Forwarding. The SIP trunk is not what forwarding rules key on.",
+      "sources": [
+        {
+          "title": "3CX Manual: Creating Users / Extensions",
+          "url": "https://www.3cx.com/docs/manual/create-extensions/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-2004",
+      "domain": "Ch2 Setup your Team",
+      "question": "In 3CX V20, whose office hours are applied to an incoming call?",
+      "choices": [
+        "The global office hours configured on the SIP trunk the call came in on",
+        "The office hours of the first IVR that answered the call",
+        "The office hours in the caller's time zone",
+        "The office hours of the System Owner's department",
+        "The office hours of the department that the destination extension or system extension belongs to"
+      ],
+      "answer_index": 4,
+      "explanation": "V20 applies department office hours at the call's destination, so only where the call arrives matters. Global office hours applied at the SIP trunk level were the older model and no longer exist.",
+      "sources": [
+        {
+          "title": "3CX Manual: Configure Your Office Hours",
+          "url": "https://www.3cx.com/docs/manual/office-hours/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-2005",
+      "domain": "Ch2 Setup your Team",
+      "question": "Who can override a department's office hours (force open, closed or break) from the Web Client?",
+      "choices": [
+        "Any user, for any department in the system",
+        "Only the SIP trunk provider, through its portal",
+        "Users with the Receptionist role or higher, for an IVR or queue in their own department",
+        "Users with the User role, as long as they have a desk phone",
+        "Only AI Receptionist agents"
+      ],
+      "answer_index": 2,
+      "explanation": "Overriding office hours requires the Receptionist role or higher, and it only works when the IVR or queue is in the same department as that user. Ordinary users cannot do it.",
+      "sources": [
+        {
+          "title": "3CX Manual: Configure Your Office Hours",
+          "url": "https://www.3cx.com/docs/manual/office-hours/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-2006",
+      "domain": "Ch2 Setup your Team",
+      "question": "Which 3CX AI Agent type gets the additional Human Handoff and Escalation Topics call routing options?",
+      "choices": [
+        "Receptionist",
+        "Customer Service Agent",
+        "Personal Assistant",
+        "Digital Receptionist (IVR)",
+        "Call Queue"
+      ],
+      "answer_index": 1,
+      "explanation": "Customer Service Agents use Knowledge Sources to resolve caller issues and add Human Handoff and Escalation Topics for passing calls to people or specialised destinations. Receptionist agents route with Route by Topic and Extension Routing by Name instead.",
+      "sources": [
+        {
+          "title": "3CX AI Agents Configuration",
+          "url": "https://www.3cx.com/docs/ai-agent-configuration/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-3001",
+      "domain": "Ch3 SIP Trunks",
+      "question": "What does Direct Inward Dialing (DID) allow a business to do?",
+      "choices": [
+        "Let internal users place outbound calls directly without first dialing an operator or extra digits",
+        "Redirect an incoming call to a different external number or device",
+        "Assign individual phone numbers to employees without a separate physical line for each one",
+        "Combine SIP signaling and RTP media from one site into a single stream to the PBX",
+        "Encrypt the SIP signaling between the PBX and the provider"
+      ],
+      "answer_index": 2,
+      "explanation": "DID gives each employee or department its own number while sharing a limited number of trunk lines, and the PBX routes the call to the mapped extension. Letting users dial out directly is Direct Outward Dialing (DOD), and sending calls to another number is call forwarding.",
+      "sources": [
+        {
+          "title": "3CX: What is DID (Direct Inward Dialing)?",
+          "url": "https://www.3cx.com/pbx/did/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-3002",
+      "domain": "Ch3 SIP Trunks",
+      "question": "When configuring a SIP trunk in 3CX, what is the trunk's \"default route\" used for?",
+      "choices": [
+        "It is the destination for incoming calls to DIDs that are not assigned to any extension or system extension",
+        "It is the route used for all outbound calls when no outbound rule matches",
+        "It is the destination for every inbound call on the trunk, even DIDs already assigned to a user",
+        "It is the backup trunk 3CX switches to when the primary trunk is unregistered",
+        "It is the route reserved for emergency numbers"
+      ],
+      "answer_index": 0,
+      "explanation": "The default route catches inbound calls for DIDs that have no assigned destination. Once a number is assigned to an IVR or extension, the default route is ignored for that number, so it does not handle every inbound call.",
+      "sources": [
+        {
+          "title": "3CX Manual: Configuring SIP Trunks / VoIP Providers",
+          "url": "https://www.3cx.com/docs/manual/sip-trunks/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-3003",
+      "domain": "Ch3 SIP Trunks",
+      "question": "A 3CX system has five outbound rules, and the conditions of both rule 2 and rule 4 match a dialed number. Which rule is used?",
+      "choices": [
+        "Rule 4, because the most recently added rule has the highest priority",
+        "Both rules, applied one after the other",
+        "The rule with the most specific conditions, regardless of its position",
+        "Rule 4, because rules are evaluated from the bottom of the list upward",
+        "Rule 2, because rules are triggered by priority from top to bottom and later rules do not apply once one matches"
+      ],
+      "answer_index": 4,
+      "explanation": "Outbound rules are evaluated in priority order from the top of the list, and once a rule triggers, subsequent rules are not applied. A newly created rule is actually added at the bottom with the least priority, so it does not win by being newest.",
+      "sources": [
+        {
+          "title": "3CX Manual: Configuring Outbound Rules",
+          "url": "https://www.3cx.com/docs/manual/outbound-call-routing/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-3004",
+      "domain": "Ch3 SIP Trunks",
+      "question": "How does 3CX handle a call when a user dials a configured emergency number?",
+      "choices": [
+        "It routes the call only if an outbound rule with a matching prefix exists",
+        "It prioritizes the call and ignores outbound, in-office and out-of-office rules",
+        "It sends the call to the trunk's default route",
+        "It places the call only during office hours and otherwise sends it to voicemail",
+        "It blocks the call unless the SIP trunk is limited to the caller's department"
+      ],
+      "answer_index": 1,
+      "explanation": "Emergency numbers are configured separately under Admin > System > Emergency with their own routes, and the PBX gives them priority over normal rules. They do not depend on an outbound rule prefix match.",
+      "sources": [
+        {
+          "title": "3CX Manual: Emergency Numbers",
+          "url": "https://www.3cx.com/docs/manual/emergency-numbers/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-3005",
+      "domain": "Ch3 SIP Trunks",
+      "question": "According to the 3CX Academy Basic course, how do licence restrictions apply to emergency numbers once they are configured?",
+      "choices": [
+        "Emergency calls count against the simultaneous call limit and can be refused when it is reached",
+        "Emergency numbers can only be configured on an Enterprise licence",
+        "A separate emergency calling add-on licence is required",
+        "The PBX does not apply licence restrictions to them",
+        "Only users with a paid licence seat can dial them"
+      ],
+      "answer_index": 3,
+      "explanation": "The course stresses that configured emergency numbers are exempt from the PBX's licence restrictions, so they are not blocked by licence limits. The admin still has to configure them to match local legal requirements.",
+      "sources": [
+        {
+          "title": "3CX Academy: Basic Certification",
+          "url": "https://www.3cx.com/3cxacademy/basic/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-3006",
+      "domain": "Ch3 SIP Trunks",
+      "question": "An admin connects 3CX to a VoIP provider that is not on 3CX's supported list and runs into trunk problems. What support position does 3CX take?",
+      "choices": [
+        "3CX supports any SIP-compliant provider equally through its ticket system",
+        "3CX will build a custom provider template for the admin on request",
+        "3CX provides support for issues related to Supported SIP Trunks only, so the admin needs a provider familiar with 3CX",
+        "3CX supports unsupported providers only if they use IP-based authentication",
+        "Unsupported providers cannot be added to 3CX at all"
+      ],
+      "answer_index": 2,
+      "explanation": "3CX supports only its Supported SIP Trunks and will not help configure an unsupported provider, so the provider itself must support the setup. Unsupported providers can still be configured (for example via the generic template), so they are not blocked outright.",
+      "sources": [
+        {
+          "title": "3CX Academy: Basic Certification",
+          "url": "https://www.3cx.com/3cxacademy/basic/"
+        },
+        {
+          "title": "3CX Manual: Configuring SIP Trunks / VoIP Providers",
+          "url": "https://www.3cx.com/docs/manual/sip-trunks/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-3007",
+      "domain": "Ch3 SIP Trunks",
+      "question": "A trunk has several inbound Caller ID reformatting rules, and more than one could match an incoming number. Which rule does 3CX apply?",
+      "choices": [
+        "The first matched rule, since rules have priority",
+        "Every matching rule, applied in sequence",
+        "The last matching rule in the list",
+        "The rule with the longest source pattern",
+        "None, because only one rule is allowed per direction"
+      ],
+      "answer_index": 0,
+      "explanation": "Caller ID reformatting rules are prioritized and the first one that matches is applied. More than one rule per direction is explicitly allowed, so the one-rule-only option is wrong.",
+      "sources": [
+        {
+          "title": "3CX: How to Configure Caller ID Reformatting",
+          "url": "https://www.3cx.com/docs/cid-reformatting/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-4001",
+      "domain": "Ch4 IP Phone Provisioning & Apps",
+      "question": "What is the 3CX Session Border Controller (SBC)?",
+      "choices": [
+        "A hardware gateway that converts analog phone lines into SIP trunks",
+        "A 3CX-hosted service that replaces the need for a SIP trunk provider",
+        "A desktop softphone for users who do not have an IP phone",
+        "A set of firewall rules that 3CX pushes to the customer's router",
+        "A software service in the local network that combines SIP and RTP traffic from one location and delivers it to a cloud or remote 3CX"
+      ],
+      "answer_index": 4,
+      "explanation": "The SBC is software installed on a local machine (with a static IP) that bundles a site's SIP signaling and RTP media toward 3CX, getting around common firewall and networking issues. It does not replace a SIP trunk or act as an analog gateway.",
+      "sources": [
+        {
+          "title": "3CX: Tunnel / Session Border Controller",
+          "url": "https://www.3cx.com/docs/3cx-tunnel-session-border-controller/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-4002",
+      "domain": "Ch4 IP Phone Provisioning & Apps",
+      "question": "A small branch office with six IP phones needs to connect to a 3CX instance hosted in the cloud. What does 3CX recommend?",
+      "choices": [
+        "Connect each phone directly over the internet with no SBC or router phone",
+        "Use an SBC-capable IP phone, known as a router phone",
+        "Enable STUN on every phone through a custom template",
+        "Rely on DHCP option 66 instead of an SBC or router phone",
+        "Install a dedicated SBC, because router phones are only for single remote users"
+      ],
+      "answer_index": 1,
+      "explanation": "For networks with fewer than 10 phones, 3CX recommends a router phone, which runs the SBC onboard; a dedicated SBC is better for more than 10 phones. A cloud install needs at least one router phone or SBC on the phones' network, and 3CX does not recommend or support STUN.",
+      "sources": [
+        {
+          "title": "3CX: Tunnel / Session Border Controller",
+          "url": "https://www.3cx.com/docs/3cx-tunnel-session-border-controller/"
+        },
+        {
+          "title": "3CX Manual: Configuring IP Phones",
+          "url": "https://www.3cx.com/docs/manual/ip-phones/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-4003",
+      "domain": "Ch4 IP Phone Provisioning & Apps",
+      "question": "Which provisioning method relies on the phone being pre-programmed at the factory to contact its vendor's server and request the provisioning URL?",
+      "choices": [
+        "PnP broadcast",
+        "DHCP option 66",
+        "Manual entry in the phone's web interface",
+        "RPS",
+        "The SIP Trunk checker"
+      ],
+      "answer_index": 3,
+      "explanation": "With RPS, 3CX sends the provisioning URL to the vendor's RPS server, and a new phone fetches it on boot; it works for cloud and on-premise installs. PnP instead uses a broadcast picked up by the 3CX server on the local network.",
+      "sources": [
+        {
+          "title": "3CX Manual: Configuring IP Phones",
+          "url": "https://www.3cx.com/docs/manual/ip-phones/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-4004",
+      "domain": "Ch4 IP Phone Provisioning & Apps",
+      "question": "What is a key limitation of provisioning 3CX phones through DHCP option 66?",
+      "choices": [
+        "The phones generally need to be from the same vendor, because vendors use different URL formats",
+        "It works only when 3CX is hosted in the cloud",
+        "It works only for router phones",
+        "The phone must stay offline for 14 days before it reads the option",
+        "It cannot be used on networks with managed DHCP servers"
+      ],
+      "answer_index": 0,
+      "explanation": "Option 66 holds one base URL that each phone appends its MAC address to, so mixing vendors with different URL formats breaks it. It is aimed at larger networks with managed DHCP servers, not excluded from them.",
+      "sources": [
+        {
+          "title": "3CX Manual: Configuring IP Phones",
+          "url": "https://www.3cx.com/docs/manual/ip-phones/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-4005",
+      "domain": "Ch4 IP Phone Provisioning & Apps",
+      "question": "What does an external invitee need in order to join a 3CX video conference?",
+      "choices": [
+        "The 3CX Windows softphone installed on their computer",
+        "Their own 3CX extension",
+        "Only the meeting link, which they can open in the browser with no login, sign-up or installation",
+        "A 3CX account created before the meeting starts",
+        "A DID number to dial into the meeting"
+      ],
+      "answer_index": 2,
+      "explanation": "Invitees join 3CX meetings in-browser (Chrome or Firefox) or through the free video apps, using only the meeting link. No extension, account or software install is required.",
+      "sources": [
+        {
+          "title": "3CX User Manual: Video Conferencing",
+          "url": "https://www.3cx.com/user-manual/video-conferencing/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-5001",
+      "domain": "Ch5 Call Handling",
+      "question": "What is the key capability a 3CX call queue offers that a ring group does not?",
+      "choices": [
+        "It can be assigned one or more DID numbers",
+        "It can ring all members simultaneously",
+        "It holds callers in a queue while all agents are busy until an agent becomes available",
+        "It follows the office hours of the department it belongs to",
+        "It can send unanswered calls to a separate destination for holidays"
+      ],
+      "answer_index": 2,
+      "explanation": "3CX describes ring groups as routing calls concurrently or sequentially to extensions, while queues keep callers waiting until an agent is free. DIDs, Ring All, department office hours and holiday destinations are available on ring groups too.",
+      "sources": [
+        {
+          "title": "3CX Manual: Call Queues & Ring Groups",
+          "url": "https://www.3cx.com/docs/manual/call-center-queues/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-5002",
+      "domain": "Ch5 Call Handling",
+      "question": "Which 3CX queue polling strategy randomly picks the first member to poll, spreading calls evenly across the queue?",
+      "choices": [
+        "Hunt Random Start",
+        "Prioritized Hunt",
+        "Hunt by Threes Prioritized",
+        "Longest Waiting",
+        "Ring All"
+      ],
+      "answer_index": 0,
+      "explanation": "Hunt Random Start chooses the first member at random, which distributes calls evenly. Prioritized Hunt always starts at the top of the member list for every call.",
+      "sources": [
+        {
+          "title": "3CX Manual: Call Queues & Ring Groups",
+          "url": "https://www.3cx.com/docs/manual/call-center-queues/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-5003",
+      "domain": "Ch5 Call Handling",
+      "question": "A queue should send each call to the agent who has answered the least number of calls. Which polling strategy does this?",
+      "choices": [
+        "Least Talk Time",
+        "Longest Waiting",
+        "Round Robin",
+        "Prioritized Hunt",
+        "Fewest Answered"
+      ],
+      "answer_index": 4,
+      "explanation": "Fewest Answered targets the member with the lowest count of answered calls. Least Talk Time looks at total talk time instead, and Longest Waiting picks the member waiting the longest.",
+      "sources": [
+        {
+          "title": "3CX Manual: Call Queues & Ring Groups",
+          "url": "https://www.3cx.com/docs/manual/call-center-queues/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-5004",
+      "domain": "Ch5 Call Handling",
+      "question": "How does the 3CX Intercom function differ from Paging?",
+      "choices": [
+        "Intercom requires multicast-capable phones on the same subnet as 3CX",
+        "Intercom targets a single extension with two-way audio, while paging is a one-way announcement to a group",
+        "Intercom requires the called party to pick up the handset before audio flows",
+        "Intercom uses its own dial code and needs no user permission",
+        "Intercom broadcasts to a ring group, while paging targets one extension"
+      ],
+      "answer_index": 1,
+      "explanation": "Intercom makes a two-way announcement to one extension without the handset being lifted; paging is one-way to a ring group. Multicast and same-subnet requirements belong to the Paging Multicast strategy, and intercom reuses the paging dial code and requires Call Operations for the user.",
+      "sources": [
+        {
+          "title": "3CX Manual: Call Queues & Ring Groups",
+          "url": "https://www.3cx.com/docs/manual/call-center-queues/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-5005",
+      "domain": "Ch5 Call Handling",
+      "question": "In a 3CX queue's advanced settings, what is the SLA Time used for?",
+      "choices": [
+        "Setting how many seconds an agent gets to wrap up before the next queue call",
+        "Setting how long a call rings on targeted members before a new polling cycle starts",
+        "Setting when a callback is automatically offered to the caller",
+        "Queue notifications and reporting, such as the SLA Statistics and SLA Breaches reports",
+        "Limiting how many callers can wait in the queue at once"
+      ],
+      "answer_index": 3,
+      "explanation": "The manual says SLA Time drives queue notifications and SLA reporting. Wrap-up Time, Ring Time, the callback offer timer and Maximum callers in queue are separate settings.",
+      "sources": [
+        {
+          "title": "3CX Manual: Call Queues & Ring Groups",
+          "url": "https://www.3cx.com/docs/manual/call-center-queues/"
+        },
+        {
+          "title": "3CX Call Center: A Guide for Queue Managers",
+          "url": "https://www.3cx.com/blog/unified-communications/call-queues-managers/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-5006",
+      "domain": "Ch5 Call Handling",
+      "question": "When Queue Callbacks are enabled and a caller hangs up to wait for a callback, when does the queue call them back?",
+      "choices": [
+        "When an agent becomes available",
+        "Immediately, before any agent is polled",
+        "At the start of the next office-hours period",
+        "Only after a supervisor manually approves the callback",
+        "After the queue statistics are next reset"
+      ],
+      "answer_index": 0,
+      "explanation": "The queue places the callback once an agent is free, and an unanswered callback counts as failed for notifications. No supervisor approval or schedule boundary is involved.",
+      "sources": [
+        {
+          "title": "3CX Manual: Call Queues & Ring Groups",
+          "url": "https://www.3cx.com/docs/manual/call-center-queues/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-6001",
+      "domain": "Ch6 Messaging",
+      "question": "An inbound customer chat arrives in a 3CX queue. What happens when one agent replies to it?",
+      "choices": [
+        "The chat stays visible to all queue agents until it is marked Dealt with",
+        "The chat is copied to the queue supervisor for approval",
+        "The chat automatically becomes that agent's, and other agents can no longer respond to or see it",
+        "The chat is archived and a new session opens for the agent",
+        "The chat is transferred to the next agent in the polling order"
+      ],
+      "answer_index": 2,
+      "explanation": "Chats are visible to all agents in the queue only until someone takes ownership, and replying takes it automatically. Clicking Take is the manual alternative.",
+      "sources": [
+        {
+          "title": "3CX: Manage Customer Queries (Live Chat, WhatsApp, Facebook and SMS/MMS)",
+          "url": "https://www.3cx.com/docs/business-chat/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-6002",
+      "domain": "Ch6 Messaging",
+      "question": "Which statement about the 3CX WhatsApp integration is correct?",
+      "choices": [
+        "Agents can start new WhatsApp conversations with any customer number",
+        "A number already registered to another WhatsApp account can be reused as is",
+        "It works fully before Meta business verification is finished",
+        "WhatsApp messages land in a separate app instead of the 3CX chat panel",
+        "It answers inbound messages only: the customer must message first, then you have 24 hours to reply"
+      ],
+      "answer_index": 4,
+      "explanation": "3CX states the integration is inbound only with a 24-hour reply window. A number already on WhatsApp must have that account deleted first, and the service does not fully work until business verification completes.",
+      "sources": [
+        {
+          "title": "3CX Manual: Configuring WhatsApp",
+          "url": "https://www.3cx.com/docs/manual/whatsapp/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-6003",
+      "domain": "Ch6 Messaging",
+      "question": "While a 3CX Facebook Messenger app is still in Meta Development mode, what does 3CX show to identify the person messaging your page?",
+      "choices": [
+        "The sender's full Facebook name",
+        "Only the Facebook user's numeric ID",
+        "The sender's email address",
+        "The sender's phone number",
+        "Nothing, because no messages are delivered in Development mode"
+      ],
+      "answer_index": 1,
+      "explanation": "In Development mode only the numeric Facebook user ID appears; the full name requires Live mode after app review. Messages from page managers and testers are still delivered, so nothing is blocked outright.",
+      "sources": [
+        {
+          "title": "3CX Manual: Configuring Facebook",
+          "url": "https://www.3cx.com/docs/manual/facebook/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    },
+    {
+      "id": "3cxb-6004",
+      "domain": "Ch6 Messaging",
+      "question": "What is required to send and receive SMS through a 3CX SIP trunk?",
+      "choices": [
+        "A WhatsApp Business Platform account linked to the trunk number",
+        "A separate SMS gateway appliance on the same subnet as 3CX",
+        "A verified Facebook Business account",
+        "A trunk provider that fully supports SMS per 3CX guidelines, with webhooks configured in both directions",
+        "Nothing extra, because every SIP trunk supports SMS automatically"
+      ],
+      "answer_index": 3,
+      "explanation": "SMS works only if the provider supports it: you enter the provider's webhook in 3CX for sending and give the provider the PBX webhook for receiving. It is not automatic on every trunk.",
+      "sources": [
+        {
+          "title": "3CX Manual: SIP Trunks",
+          "url": "https://www.3cx.com/docs/manual/sip-trunks/"
+        }
+      ],
+      "verified_at": "2026-10-28",
+      "verified_by": "quiz-research v1 (blind verify)"
+    }
+  ],
+  "version": "2026-10-28"
+}
